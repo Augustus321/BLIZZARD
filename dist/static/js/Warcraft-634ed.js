@@ -64,7 +64,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "d1aa806fbb58bfb361f6";
+/******/ 	var hotCurrentHash = "634edfef833a4bc9afc9";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -259,7 +259,7 @@
 /******/ 				};
 /******/ 			});
 /******/ 			hotUpdate = {};
-/******/ 			var chunkId = "main";
+/******/ 			var chunkId = "Warcraft";
 /******/ 			// eslint-disable-next-line no-lone-blocks
 /******/ 			{
 /******/ 				/*globals chunkId */
@@ -792,7 +792,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire("./src/js/index.js")(__webpack_require__.s = "./src/js/index.js");
+/******/ 	return hotCreateRequire("./src/js/Warcraft.js")(__webpack_require__.s = "./src/js/Warcraft.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -808,26 +808,26 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\r\n * 
 
 /***/ }),
 
-/***/ "./src/js/index.js":
-/*!*************************!*\
-  !*** ./src/js/index.js ***!
-  \*************************/
+/***/ "./src/js/Warcraft.js":
+/*!****************************!*\
+  !*** ./src/js/Warcraft.js ***!
+  \****************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _less_index_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../less/index.less */ \"./src/less/index.less\");\n/* harmony import */ var _less_index_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_less_index_less__WEBPACK_IMPORTED_MODULE_0__);\n\nconsole.log(\"This is home page.\");\n$(\"button\").on(\"click\", function () {\n  alert(\"恭喜你,你成功点击了按钮!\");\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _less_Warcraft_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../less/Warcraft.less */ \"./src/less/Warcraft.less\");\n/* harmony import */ var _less_Warcraft_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_less_Warcraft_less__WEBPACK_IMPORTED_MODULE_0__);\n\nconsole.log(\"This is contact page.\");\n$(\".title\").html(\"哈哈哈\");\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/js/Warcraft.js?");
 
 /***/ }),
 
-/***/ "./src/less/index.less":
-/*!*****************************!*\
-  !*** ./src/less/index.less ***!
-  \*****************************/
+/***/ "./src/less/Warcraft.less":
+/*!********************************!*\
+  !*** ./src/less/Warcraft.less ***!
+  \********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/less/index.less?");
+eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./src/less/Warcraft.less?");
 
 /***/ })
 

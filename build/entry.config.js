@@ -1,5 +1,5 @@
 module.exports = {
     "main":"./src/js/index.js",
-    "contact":"./src/js/contact.js",
-    "about":"./src/js/about.js"
+    "Warcraft":"./src/js/Warcraft.js",
+    "StarCraft":"./src/js/StarCraft.js"
 }

@@ -6,13 +6,13 @@ module.exports = [
         chunks:["main"]
     }),
     new HtmlWebpackPlugin({
-        template:"./src/pages/contact.html",
-        filename:"static/pages/contact.html",
-        chunks:["contact"]
+        template:"./src/pages/Warcraft.html",
+        filename:"static/pages/Warcraft.html",
+        chunks:["Warcraft"]
     }),
     new HtmlWebpackPlugin({
-        template:"./src/pages/about.html",
-        filename:"static/pages/about.html",
-        chunks:["about"]
+        template:"./src/pages/StarCraft.html",
+        filename:"static/pages/StarCraft.html",
+        chunks:["StarCraft"]
     }),
 ]
