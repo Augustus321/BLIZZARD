@@ -19,6 +19,5 @@ module.exports = [
     new webpack.ProvidePlugin({
         $:"jquery"
     }),
-    new webpack.BannerPlugin("This is not a demo!"),
     new webpack.HotModuleReplacementPlugin(),
 ]
