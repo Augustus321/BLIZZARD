@@ -5,7 +5,7 @@ const express = require("express");
 const router  = express.Router();
 // 3. 处理路由对象
 const getConnection = require("../mysqlConnection");
-/*
+/*  ****router内容可自行修改,解开注释******
 router.post("/register", (req, res) => {
     let {username, password, tel, email} = req.body;
     let sqlParams = [username, password, tel, email];

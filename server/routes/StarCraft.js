@@ -6,11 +6,11 @@ const router = express.Router();
 // 3. 处理路由对象
 const getConnection = require("../mysqlConnection");
 /**
- * 图片资源
+ * 星际争霸
  * kind 参数
  */
 
-/*
+/*  ****router内容可自行修改,解开注释******
 router.get("/images", (req, res) => {
     let { kind } = req.query;
     switch (kind) {
