@@ -15,4 +15,14 @@ module.exports = [
         filename:"static/pages/StarCraft.html",
         chunks:["StarCraft"]
     }),
+    new HtmlWebpackPlugin({
+        template:"./src/pages/loginRegister.html",
+        filename:"static/pages/loginRegister.html",
+        chunks:["loginRegister"]
+    }),
+    new HtmlWebpackPlugin({
+        template:"./src/pages/Overwatch.html",
+        filename:"static/pages/Overwatch.html",
+        chunks:["Overwatch"]
+    }),
 ]

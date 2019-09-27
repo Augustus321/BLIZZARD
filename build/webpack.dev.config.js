@@ -22,4 +22,9 @@ module.exports = {
         inline:true,
         hot:true
     },
+    resolve:{
+        alias:{
+            "main-less":path.resolve(__dirname, './src/less/index.less')
+        }
+    }
 }

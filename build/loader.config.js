@@ -36,7 +36,7 @@ module.exports = [
         use: {
             loader: "file-loader",
             options: {
-                name: "[name]-[hash:6].[ext]",
+                name: "[name]-[hash:5].[ext]",
                 outputPath: "static/images/"
             }
         }
@@ -46,5 +46,16 @@ module.exports = [
         test: /\.html/,
         exclude: /node_modules/,
         loader: 'html-loader'
-    }
+    },
+    // 处理字体
+    {
+        test: /\.(svg|ttf|eot|woff|woff2)$/,
+        use: {
+            loader: "file-loader",
+            options: {
+                name: "[name].[ext]",
+                outputPath: "static/fonts/"
+            }
+        }
+    },
 ];
