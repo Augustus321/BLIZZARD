@@ -27,9 +27,13 @@ app.use(bodyParser.json());
 
 // 6. 处理路由
 const userRouter  = require("./routes/user");
-const otherRouter = require("./routes/other");
+const WarcraftRouter = require("./routes/Warcraft");
+const StarCraftRouter = require("./routes/StarCraft");
+const OverwatchRouter = require("./routes/Overwatch");
 app.use("/user", userRouter);
-app.use("/other", otherRouter);
+app.use("/StarCraft", StarCraftRouter);
+app.use("/Warcraft", WarcraftRouter);
+app.use("/Overwatch", OverwatchRouter);
 app.get("/", (req, res) => {
     res.send("WELCOME,BLIZZARD!")
 })
