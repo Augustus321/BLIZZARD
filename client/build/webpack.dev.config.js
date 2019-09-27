@@ -10,13 +10,13 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "../dist"),
         filename: "static/js/[name]-[hash:5].js",
-        publicPath:"http://10.2.0.202:8090/"
+        publicPath:"http://localhost:8090/"
     },
     module: { rules },
     plugins,
     devServer:{
         contentBase:path.resolve(__dirname,"../dist"),
-        host:"10.2.0.202",
+        host:"localhost",
         port:8090,
         open:true,
         inline:true,
