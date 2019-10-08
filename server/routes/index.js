@@ -9,15 +9,17 @@ const getConnection = require("../mysqlConnection");
  * 守望先锋
  * kind 参数
  */
-router.get("/index",(req,res) =>{
+router.get("/homepage",(req,res) =>{
     let{kind} = req.query;
     switch(kind){
-        case "bg":{
-            res.send(`first-bg.jpg`);
-        }
-        case "a":{
-            res.send(`first-a.jpg`);
-        }
+        // 游戏链接图片
+        case "homepages":{
+            let images = [];
+            for (let i = 1; i < 8; i++) {
+                images.push(`homepage_${i}.png`);
+            }
+            res.send(images);
+        }break;
     }
 })
 /*  ****router内容可自行修改,解开注释******

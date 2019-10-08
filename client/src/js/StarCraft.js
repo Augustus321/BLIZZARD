@@ -4,7 +4,7 @@ import {
     loaddingFlash,
     loaddingBanner,
     loaddingPhone
-} from "./loadding";
+} from "./loadding-StarCraft";
 
 //swiper的设置
 loaddingFlash().then(() => {

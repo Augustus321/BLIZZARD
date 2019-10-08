@@ -1,11 +1,18 @@
 import { BASE_URL } from "./lib";
 
-export function loaddingHeader(){
-    return new Promise((resolve,reject) => {
+export function loaddingHome() {
+    return new Promise((resolve, reject) => {
         $.ajax({
-            url:`${BASE_URL}/Overwatch/index?kind=bg`,
-            success(res){
-                $(".first-box").css(`background-image`,`url("${BASE_URL}/index/fisrt-bg.jpg")`);
+            url: `${BASE_URL}/index/homepage?kind=homepages`,
+            success(res) {
+                let htmlStr = "";
+                $.each(res, (index, imgname) => {
+                    htmlStr += `<li class="swiper-slide">
+                        <img src="${BASE_URL}/images/index/${imgname}">
+                    </li>`;
+                })
+                console.log(htmlStr);
+                $(".second-content").html(htmlStr);
                 resolve();
             }
         })
