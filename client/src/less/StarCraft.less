@@ -6,21 +6,21 @@
 }
 
 //懒加载
-@keyframes moveToRight {
-    from {
-        transform: translateX(500px);
-        opacity: 0;
-    }
+// @keyframes moveToRight {
+//     from {
+//         transform: translateX(500px);
+//         opacity: 0;
+//     }
 
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
+//     to {
+//         transform: translateX(0);
+//         opacity: 1;
+//     }
+// }
 
-.anim-right {
-    animation: moveToRight 2s linear paused forwards;
-}
+// .anim-right {
+//     animation: moveToRight 2s linear paused forwards;
+// }
 
 // 头部
 .list {
@@ -76,7 +76,24 @@
     }
 
     a {
-        color: #ffffff;
+        line-height: 60px;
+        color: #cce6ff;
+        font-size: 18px;
+    }
+
+    li:nth-child(1):hover,
+    li:nth-child(2):hover,
+    li:nth-child(4):hover {
+        // background-position: 0 -60px;
+        box-shadow: 0 -2px 0 0 #3D6B99 inset;
+    }
+
+    li:nth-child(5):hover {
+        box-shadow: 0 -0 1px 2px #996600 inset;
+    }
+
+    li:hover a {
+        color: #fff;
     }
 }
 
@@ -97,7 +114,7 @@
 
     //分页器样式
     .swiper-pagination {
-        bottom: 310px;
+        bottom: 330px;
     }
 
     .swiper-pagination-bullet {
@@ -117,6 +134,8 @@
         height: 100%;
         background-position: 50% 0;
         background-repeat: no-repeat;
+
+        p{}
     }
 
     .swiper-pagination-bullet-active {
@@ -128,6 +147,15 @@
         width: 1020px;
         height: 236px;
         position: absolute;
+        left: ~'calc((100% - 1020px)/2)';
+        right: ~'calc((100% - 1020px)/2)';
         bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        li {
+            width: 328px;
+        }
     }
 }

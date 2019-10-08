@@ -11,7 +11,7 @@ const getConnection = require("../mysqlConnection");
  */
 
 
-router.get("/images", (req, res) => {
+router.get("/images/StarCraft", (req, res) => {
     let {
         kind
     } = req.query;
@@ -33,21 +33,11 @@ router.get("/images", (req, res) => {
             });
         }
         break;
-        // 横幅图标
-        // case "banner": {
-        //     let icons = [], promos = [];
-        //     let texts = ["小米秒杀", "企业团购", "F码通道", "米粉卡", "以旧换新", "话费充值"];
-        //     for (let i = 1; i < 7; i++) {
-        //         icons.push({
-        //             imgName: `icon_${i}.png`,
-        //             text: texts[i - 1]
-        //         });
-        //     }
-        //     for (let i = 1; i < 4; i++) {
-        //         promos.push(`promo_${i}.jpg`);
-        //     }
-        //     res.send({icons, promos});
-        // } break;
+        case "landing": {
+            let landing = ["landing.png"];
+            res.send(landing);
+        }
+        break;
     }
 });
 /**
