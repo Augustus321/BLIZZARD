@@ -3,13 +3,9 @@ import { BASE_URL } from "./lib";
 export function loaddingHeader(){
     return new Promise((resolve,reject) => {
         $.ajax({
-            url:`${BASE_URL}/Overwatch/videos?kind=Overwatch-header`,
+            url:`${BASE_URL}/Overwatch/index?kind=bg`,
             success(res){
-                let headerVideo = "";
-                headerVideo = `<video src="${BASE_URL}/videos/Overwatch-header.mp4" autoplay loop></video>`
-                console.log(headerVideo);
-                
-                $(".header-video").html(headerVideo);
+                $(".first-box").css(`background-image`,`url("${BASE_URL}/index/fisrt-bg.jpg")`);
                 resolve();
             }
         })
