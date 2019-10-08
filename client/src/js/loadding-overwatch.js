@@ -1,6 +1,4 @@
 import { BASE_URL } from "./lib";
-import { resolve } from "dns";
-import { rejects } from "assert";
 
 export function loaddingHeader(){
     return new Promise((resolve,reject) => {
@@ -8,7 +6,9 @@ export function loaddingHeader(){
             url:`${BASE_URL}/Overwatch/videos?kind=Overwatch-header`,
             success(res){
                 let headerVideo = "";
-                headerVideo = `<video src="${BASE_Url}/videos/Overwatch-header"></video>`
+                headerVideo = `<video src="${BASE_URL}/videos/Overwatch-header.mp4"></video>`
+                console.log(headerVideo);
+                
                 $("header-video").html(headerVideo);
                 resolve();
             }
