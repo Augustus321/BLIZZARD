@@ -13,7 +13,7 @@ router.get("/videos",(req,res) =>{
     let{kind} = req.query;
     switch(kind){
         case "Overwatch-header":{
-            res.send(`Overwatch-header`);
+            res.send(`Overwatch-header.mp4`);
         }
     }
 })
