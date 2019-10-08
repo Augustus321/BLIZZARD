@@ -4,9 +4,12 @@
   "description": "战网服务器",
   "main": "app.js",
   "scripts": {
-    "server":"node app.js"
+    "server": "node app.js"
   },
-  "keywords": ["battlenet","server"],
+  "keywords": [
+    "battlenet",
+    "server"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
