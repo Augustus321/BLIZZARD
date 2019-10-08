@@ -9,7 +9,14 @@ const getConnection = require("../mysqlConnection");
  * 守望先锋
  * kind 参数
  */
-
+router.get("/videos",(req,res) =>{
+    let{kind} = req.query;
+    switch(kind){
+        case "Overwatch-header":{
+            res.send(`Overwatch-header`);
+        }
+    }
+})
 /*  ****router内容可自行修改,解开注释******
 router.get("/images", (req, res) => {
     let { kind } = req.query;
