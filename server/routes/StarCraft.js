@@ -6,40 +6,49 @@ const router = express.Router();
 // 3. 处理路由对象
 const getConnection = require("../mysqlConnection");
 /**
- * 星际争霸
+ * 图片资源
  * kind 参数
  */
 
-/*  ****router内容可自行修改,解开注释******
+
 router.get("/images", (req, res) => {
-    let { kind } = req.query;
+    let {
+        kind
+    } = req.query;
     switch (kind) {
         // 轮播图
         case "slides": {
             let images = [];
-            for (let i = 1; i < 6; i++) {
+            for (let i = 1; i <= 4; i++) {
                 images.push(`slide_${i}.jpg`);
             }
-            res.send(images);
-        } break;
+            //轮播图上面的字
+            let imageFont = [];
+            for (let i = 1; i <= 5; i++) {
+                imageFont.push(`slideItem_${i}.png`);
+            }
+            res.send({
+                images,
+                imageFont
+            });
+        }
+        break;
         // 横幅图标
-        case "banner": {
-            let icons = [], promos = [];
-            let texts = ["小米秒杀", "企业团购", "F码通道", "米粉卡", "以旧换新", "话费充值"];
-
-            for (let i = 1; i < 7; i++) {
-                icons.push({
-                    imgName: `icon_${i}.png`,
-                    text: texts[i - 1]
-                });
-            }
-            for (let i = 1; i < 4; i++) {
-                promos.push(`promo_${i}.jpg`);
-            }
-            res.send({icons, promos});
-        } break;
+        // case "banner": {
+        //     let icons = [], promos = [];
+        //     let texts = ["小米秒杀", "企业团购", "F码通道", "米粉卡", "以旧换新", "话费充值"];
+        //     for (let i = 1; i < 7; i++) {
+        //         icons.push({
+        //             imgName: `icon_${i}.png`,
+        //             text: texts[i - 1]
+        //         });
+        //     }
+        //     for (let i = 1; i < 4; i++) {
+        //         promos.push(`promo_${i}.jpg`);
+        //     }
+        //     res.send({icons, promos});
+        // } break;
     }
-    
 });
 /**
  * 商品信息
@@ -68,7 +77,3 @@ router.get("/goods", (req, res) => {
 */
 // 4. 导出路由
 module.exports = router;
-
-
-
-
