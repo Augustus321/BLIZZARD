@@ -1,4 +1,133 @@
-@bgColor: blue;
-body {
-    background: @bgColor;
+@color-blue :#009cff;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+//懒加载
+@keyframes moveToRight {
+    from {
+        transform: translateX(500px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.anim-right {
+    animation: moveToRight 2s linear paused forwards;
+}
+
+// 头部
+.list {
+    position: absolute;
+    top: 0;
+    left: ~'calc((100% - 1200px)/2)';
+    right: ~'calc((100% - 1200px)/2)';
+    z-index: 5;
+    width: 1200px;
+    min-width: 1200px;
+    height: 100px;
+    list-style: none;
+    margin: 0 auto;
+
+    li {
+        float: left;
+        width: 200px;
+        line-height: 60px;
+        background: url(http://sc2.nos.netease.com/1/style/v4/landing/201804/nav-btn.png) no-repeat 0 0;
+        text-align: center;
+    }
+
+    li:not(.logo) {
+        margin-top: 40px;
+    }
+
+    li:nth-child(5) {
+        background-position: -200px 0;
+        background-size: 200% 200%;
+    }
+
+    li>a {
+        text-decoration: none;
+    }
+
+    .logo {
+        width: 400px;
+        background: transparent;
+    }
+
+    .logo>a {
+        display: block;
+        width: 100%;
+        height: 60px;
+        position: relative;
+    }
+
+    .logo>a>img {
+        display: block;
+        top: 0;
+        left: 13px;
+        position: absolute;
+    }
+
+    a {
+        color: #ffffff;
+    }
+}
+
+// 轮播
+.swiper-container {
+    height: 110vh;
+    min-height: 950px;
+    max-height: 950px;
+    position: relative;
+
+    .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+        color: #ffffff;
+        font-size: 50px;
+
+    }
+
+    //分页器样式
+    .swiper-pagination {
+        bottom: 310px;
+    }
+
+    .swiper-pagination-bullet {
+        display: inline-block;
+        width: 100px;
+        height: 10px;
+        background: rgba(255, 255, 255, .5);
+        transform: skew(-30deg);
+        margin: 0 4px;
+        cursor: pointer;
+        border-radius: 0;
+    }
+
+    .swiper-wrapper>.swiper-slide>span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: @color-blue;
+    }
+
+    // 下面的三个a标签盒子
+    .swiper-grid {
+        width: 1020px;
+        height: 236px;
+        position: absolute;
+        bottom: 50px;
+    }
 }
