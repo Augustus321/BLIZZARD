@@ -2,7 +2,7 @@ import "../less/StarCraft.less";
 // import "../js/fn.js";
 import {
     loaddingFlash,
-    loaddingLand
+    loaddingFooter
 } from "./loadding-StarCraft";
 
 //swiper的设置
@@ -21,5 +21,4 @@ loaddingFlash().then(() => {
         speed: 500,
     })
 });
-
-loaddingLand();
+loaddingFooter();
