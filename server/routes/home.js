@@ -16,7 +16,7 @@ router.get("/homepage", (req, res) => {
         case "homepages": {
             let images = [];
             let homenames = ["《魔兽世界》", "《暗黑破坏神|||》", "《星际争霸||》", "《星际争霸：重制版》", "《风暴英雄》", "《炉石传说》", "《守望先锋》"];
-            let homelinks =["./static/pages/Warcraft.html","http://d3.blizzard.cn/home","./static/pages/StarCraft.html","http://sc.blizzard.cn/home","http://heroes.blizzard.cn/landing","http://hs.blizzard.cn/landing","./static/pages/Overwatch.html"];
+            let homelinks =["http://www.battlenet.com.cn/wow/","http://d3.blizzard.cn/home","./static/pages/StarCraft.html","http://sc.blizzard.cn/home","http://heroes.blizzard.cn/landing","http://hs.blizzard.cn/landing","./static/pages/Overwatch.html"];
             for (let i = 1; i < 8; i++) {
                 images.push({
                     imgName: `homepage_${i}.png`,
