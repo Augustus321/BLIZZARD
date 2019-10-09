@@ -130,13 +130,25 @@
             display        : flex;
             justify-content: space-around;
             position       : absolute;
-
+            top: -75px;
             li {
                 .second-homelink {
                     display: inline-block;
                     border : 1px solid #3E414A;
                     width  : 162px;
                     height : 392px;
+                    background-position: 0 0;
+                    p{
+                        text-align: center;
+                        line-height: 50px;
+                        color: #B2BAC7;
+                    }
+                    &:hover{
+                        background-position: -248px 0 !important;
+                        p{
+                            color: #ffffff;
+                        }
+                    }
                 }
             }
         }

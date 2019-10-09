@@ -9,12 +9,12 @@ export function loaddingHome() {
             let homeHtmlStr = "";
             $.each(images, (_, obj) => {
                 homeHtmlStr += `<li>
-                    <a href="${obj.homelink}" style="background:url(${BASE_URL}/images/index/${obj.imgName}) no-repeat 0 0" class="second-homelink">
+                    <a href="${obj.homelink}" style="background:url(${BASE_URL}/images/index/${obj.imgName}) no-repeat" class="second-homelink">
                         <p>${obj.hometext}</p>
                     </a>
                 </li>`;
             });
-            $(".second-content").html(homeHtmlStr);
+            $(".second-list").html(homeHtmlStr);
         }
     })
 }
