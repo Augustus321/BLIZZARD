@@ -3,8 +3,10 @@ import { BASE_URL } from "./lib";
 export function loaddingHome() {
     return new Promise((resolve, reject) => {
         $.ajax({
-            url: `${BASE_URL}/index/homepage?kind=homepages`,
+            url: `${BASE_URL}/home/homepage?kind=homepages`,
             success(res) {
+                console.log(res);
+                
                 let htmlStr = "";
                 $.each(res, (index, imgname) => {
                     htmlStr += `<li class="swiper-slide">

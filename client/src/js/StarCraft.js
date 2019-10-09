@@ -2,12 +2,7 @@ import "../less/StarCraft.less";
 // import "../js/fn.js";
 import {
     loaddingFlash,
-<<<<<<< HEAD
-    loaddingBanner,
-    loaddingPhone
-=======
     loaddingLand
->>>>>>> bfba9fd9630620ab5ac9fa255440bad4b8fa110b
 } from "./loadding-StarCraft";
 
 //swiper的设置
