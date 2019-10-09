@@ -99,9 +99,9 @@
 
 // 轮播
 .swiper-container {
-    height: 110vh;
+    height: 1570px;
     min-height: 950px;
-    max-height: 950px;
+    max-height: 1050px;
     position: relative;
 
     .swiper-wrapper {
@@ -114,7 +114,7 @@
 
     //分页器样式
     .swiper-pagination {
-        bottom: 330px;
+        bottom: 450px;
     }
 
     .swiper-pagination-bullet {
@@ -134,8 +134,6 @@
         height: 100%;
         background-position: 50% 0;
         background-repeat: no-repeat;
-
-        p{}
     }
 
     .swiper-pagination-bullet-active {
@@ -149,13 +147,114 @@
         position: absolute;
         left: ~'calc((100% - 1020px)/2)';
         right: ~'calc((100% - 1020px)/2)';
-        bottom: 50px;
+        bottom: 150px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
 
         li {
+            cursor: pointer;
+            z-index: 2;
             width: 328px;
+            background: url(http://localhost:8081/images/StarCraft/landing.png) 0 -400px;
+            position: relative;
+        }
+
+        .title {
+            margin: 25px 0 20px 0;
+            color: #8ce3ff;
+            line-height: 24px;
+            font-size: 16px;
+            font-weight: 700;
+            text-shadow: 0 0 5px #00439e;
+            text-align: center;
+        }
+
+        .video-btn {
+            width: 306px;
+            height: 156px;
+            background-color: #996600;
+            margin-left: 10px;
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 400px;
+    background-color: #010816;
+    position: relative;
+
+
+    .footer-line {
+        width: 1184px;
+        max-width: 100%;
+        height: 43px;
+        background: url(http://localhost:8081/images/StarCraft/footer-line.png)no-repeat center center;
+        position: absolute;
+        // left: ~'calc((100% - 1184px)/2)';
+        // right: ~'calc((100% - 1184px)/2)';
+        top: -25px;
+        z-index: 4;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-word {
+        width: 1000px;
+        height: auto;
+        padding-top: 60px;
+        margin: 0 auto;
+
+        .footer-btn {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .footer-btn-left {
+                p {
+                    float: left;
+
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        margin-right: 37px;
+                        vertical-align: middle;
+                        padding-top: 5px;
+                        font-weight: 400;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .footer-btn-right {
+
+                p {
+                    float: left;
+                    color: #fff;
+                    font-weight: 400;
+                    font-size: 14px;
+                }
+
+                span {
+                    float: left;
+                    background: #011841;
+                    border: 1px solid #011841;
+                    color: #fff;
+                    font-size: 8px;
+                    text-align: center;
+                    line-height: 8px;
+                    width: 14px;
+                    display: inline-block;
+                    margin: 0 0 0 13px;
+                    padding: 3px 0 3px 0;
+                    position: relative;
+                    top: 3px;
+                    cursor: pointer;
+                }
+
+            }
+
         }
     }
 }

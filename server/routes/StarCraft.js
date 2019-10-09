@@ -33,9 +33,12 @@ router.get("/images/StarCraft", (req, res) => {
             });
         }
         break;
-        case "landing": {
-            let landing = ["landing.png"];
-            res.send(landing);
+        case "footer": {
+            let imageFooter = [];
+            for (let i = 1; i <= 2; i++) {
+                imageFooter.push(`footer-logo-${i}.png`);
+            }
+            res.send(imageFooter);
         }
         break;
     }

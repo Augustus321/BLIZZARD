@@ -5,7 +5,7 @@ import {
 export function loaddingFlash() {
     return new Promise((resolve, reject) => {
         $.ajax({
-            url: `${BASE_URL}/StarCraft/images?kind=slides`,
+            url: `${BASE_URL}/StarCraft/images/StarCraft?kind=slides`,
             success({
                 images,
                 imageFont
@@ -51,18 +51,19 @@ export function loaddingFlash() {
         })
     })
 };
-export function loaddingLand() {
+export function loaddingFooter() {
     return new Promise((resolve, reject) => {
         $.ajax({
-            url: `${BASE_URL}/StarCraft/images?kind=landing`,
-            success(res) {
-                let htmlStr = `
-                        <li style="background: url(${BASE_URL}/images/StarCraft/landing.png)"><a href="#"></a></li>
-                        <li style="background: url(${BASE_URL}/images/StarCraft/landing.png)"><a href="#"></a></li>
-                        <li style="background: url(${BASE_URL}/images/StarCraft/landing.png)"><a href="#"></a></li>`;
-                $(".swiper-grid").html(htmlStr);
+            url: `${BASE_URL}/StarCraft/images/StarCraft?kind=footer`,
+            success(imageFooter) {
+                let htmlStr = "";
+                htmlStr +=
+                    `  <img src="${BASE_URL}/images/StarCraft/footer-logo-1.png">
+                       <img src="${BASE_URL}/images/StarCraft/footer-logo-2.png">
+                        `;
+                $(".footer-logo").html(htmlStr);
                 resolve();
             }
         })
     })
-}
+};
