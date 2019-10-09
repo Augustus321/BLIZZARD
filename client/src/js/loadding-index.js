@@ -1,23 +1,21 @@
 import { BASE_URL } from "./lib";
 
 export function loaddingHome() {
-    return new Promise((resolve, reject) => {
-        $.ajax({
-            url: `${BASE_URL}/home/homepage?kind=homepages`,
-            success(res) {
-                console.log(res);
-                
-                let htmlStr = "";
-                $.each(res, (index, imgname) => {
-                    htmlStr += `<li class="swiper-slide">
-                        <img src="${BASE_URL}/images/index/${imgname}">
-                    </li>`;
-                })
-                console.log(htmlStr);
-                $(".second-content").html(htmlStr);
-                resolve();
-            }
-        })
+    $.ajax({
+        url: `${BASE_URL}/home/homepage?kind=homepages`,
+        success(res) {
+            console.log(res);
+            let { images } = res;
+            let homeHtmlStr = "";
+            $.each(images, (_, obj) => {
+                homeHtmlStr += `<li>
+                    <a href="${obj.homelink}" style="background:url(${BASE_URL}/images/index/${obj.imgName}) no-repeat 0 0" class="second-homelink">
+                        <p>${obj.hometext}</p>
+                    </a>
+                </li>`;
+            });
+            $(".second-content").html(homeHtmlStr);
+        }
     })
 }
 /*

@@ -6,15 +6,16 @@
     background-image: url(http://10.2.0.202:8081/images/index/first-bg.jpg);
 
     .first-content {
-        width    : 1280px;
-        margin   : 0 auto;
-        min-width: 1280px;
-        padding-top: 50px;
+        width         : 1280px;
+        margin        : 0 auto;
+        min-width     : 1280px;
+        padding-top   : 50px;
         padding-bottom: 120px;
     }
 
     .fisrt-top {
         margin-bottom: 10px;
+
         image {
             width : 100%;
             height: 100%;
@@ -22,12 +23,12 @@
     }
 
     .first-left {
-        display: inline-block;
+        display    : inline-block;
         padding-top: 50px;
 
         .first-mid {
-            width       : 643px;
-            margin-right: 20px;
+            width         : 643px;
+            margin-right  : 20px;
             padding-bottom: 25px;
 
             a {
@@ -70,14 +71,16 @@
                 border-radius: 3px;
                 background   : -webkit-linear-gradient(top, #0081b4 0%, #006a9b 100%);
                 margin-right : 10px;
-                &:hover{
+
+                &:hover {
                     background: #008dc5;
                 }
             }
 
             .login-a {
                 color: #00b6ff;
-                &:hover{
+
+                &:hover {
                     color: #ffffff;
                 }
             }
@@ -106,6 +109,35 @@
 
             .first-software-a {
                 color: #ffffff;
+            }
+        }
+    }
+}
+
+.second-box {
+    background   : #d3d1ce url(http://10.2.0.202:8081/images/index/second-bg.jpg) top center repeat-x;
+    border-bottom: 4px solid #777674;
+
+
+    .second-content {
+        width    : 1280px;
+        min-width: 1280px;
+        margin   : 0 auto;
+        position : relative;
+
+        .second-list {
+            width          : inherit;
+            display        : flex;
+            justify-content: space-around;
+            position       : absolute;
+
+            li {
+                .second-homelink {
+                    display: inline-block;
+                    border : 1px solid #3E414A;
+                    width  : 162px;
+                    height : 392px;
+                }
             }
         }
     }
