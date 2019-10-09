@@ -16,15 +16,18 @@ router.get("/homepage", (req, res) => {
         case "homepages": {
             let images = [];
             let homenames = ["《魔兽世界》", "《暗黑破坏神|||》", "《星际争霸||》", "《星际争霸：重制版》", "《风暴英雄》", "《炉石传说》", "《守望先锋》"];
+            let homelinks =["./static/pages/Warcraft.html","http://d3.blizzard.cn/home","./static/pages/StarCraft.html","http://sc.blizzard.cn/home","http://heroes.blizzard.cn/landing","http://hs.blizzard.cn/landing","./static/pages/Overwatch.html"];
             for (let i = 1; i < 8; i++) {
                 images.push({
                     imgName: `homepage_${i}.png`,
-                    text: homenames[i - 1]
+                    hometext: homenames[i - 1],
+                    homelink:homelinks[i-1]
                 });
-                res.send(images);
-            } break;
-        }
-    })
+            }
+            res.send({ images });
+        } break;
+    }
+})
 /*  ****router内容可自行修改,解开注释******
 router.get("/images", (req, res) => {
     let { kind } = req.query;
