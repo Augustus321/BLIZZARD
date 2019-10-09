@@ -11,6 +11,7 @@ $(function () {
     window.onscroll = function () {
         // 获取窗口滚动的距离
         offset = document.body.scrollTop || document.documentElement.scrollTop;
+        // this.console.log(window.outerHeight);
         if (offset > 60) {
             $("#Warcraft-hd").addClass("fixed");
         }
@@ -34,4 +35,37 @@ $(function () {
         $('.section-btn').css('display', 'none');
     });
     // 查看全部结束
+
+    // 弹出视频
+    let popBox = false;
+    $(".video-click").click(function(){
+        popBox = !popBox;
+        let site = $(this).data("src");
+        ViedoShow(site);
+    })
+    $(".Navbar-overlay").click(function(){
+        popBox = false;
+        ViedoShow();
+    })
+    $("#popBox img").click(function(){
+        popBox = false;
+        ViedoShow();
+    })
+    function ViedoShow(src){
+        if(popBox == true){
+            $("#popBox").addClass("Navshow");
+            $(".popBox-content video").html(` <source src="${src}">`);
+            $(".popBox-content video").trigger('play');
+            $(".Navbar-overlay").addClass("Navshow");
+            setTimeout(() => {
+                $("#popBox").addClass("popBox-animation");
+            }, 200);
+        }else if(popBox == false){
+            $("#popBox").removeClass("Navshow");
+            $(".popBox-content video").trigger('pause');
+            $(".popBox-content video").html(``);
+            $(".Navbar-overlay").removeClass("Navshow");
+            $("#popBox").removeClass("popBox-animation");
+        }
+    }
 })
