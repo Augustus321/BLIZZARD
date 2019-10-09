@@ -1,0 +1,37 @@
+{
+  "id": "1449164",
+  "name": "StarCraft",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "270836",
+      "name": "意见反馈",
+      "font_class": "yijianfankui",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "736512",
+      "name": "问号",
+      "font_class": "wenhao",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "886908",
+      "name": "三角形",
+      "font_class": "sanjiaoxing",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "9851599",
+      "name": "加入我们",
+      "font_class": "jiaruwomen",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    }
+  ]
+}
