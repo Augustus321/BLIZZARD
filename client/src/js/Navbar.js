@@ -4,7 +4,7 @@ let esports_state = false;
 let act_state = false;
 
 $("#Navbar-games").click(function(){
-    state = true;
+    state = !state;
     esports_state = false;
     act_state = false;
     switchshow();
@@ -16,7 +16,7 @@ $("#Navbar-games").click(function(){
 })
 
 $("#Navbar-esports").click(function(){
-    esports_state = true;
+    esports_state = !esports_state;
     state = false;
     act_state = false;
     switchshow();
@@ -28,7 +28,7 @@ $("#Navbar-esports").click(function(){
 })
 
 $("#Navbar-act").click(function(){
-    act_state = true;
+    act_state = !act_state;
     state = false;
     esports_state = false;
     switchshow();
