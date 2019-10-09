@@ -1,7 +1,7 @@
 import "../less/index-nav.less";
 import "../less/Warcraft.less";
 import { BASE_URL } from "./lib";
-import "../js/Navbar"
+import "./Navbar"
 $(function () {
 
     // 头部逻辑
@@ -26,7 +26,7 @@ $(function () {
         let HtmlStr = ``;
         for (let i = 5; i < 13; i++) {
             HtmlStr += `<div>
-                <img src="${BASE_URL}/video/screenshot_${i}.jpg" alt="">
+                <img src="${BASE_URL}/images/Warcraft/screenshot_${i}.jpg" alt="">
                 <div class="box-shadow"></div>
             </div>`
         }
