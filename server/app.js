@@ -28,11 +28,13 @@ app.use(bodyParser.json());
 // 6. 处理路由
 const homeRouter = require("./routes/home");
 const userRouter  = require("./routes/user");
+const storeRouter = require("./routes/store");
 const WarcraftRouter = require("./routes/Warcraft");
 const StarCraftRouter = require("./routes/StarCraft");
 const OverwatchRouter = require("./routes/Overwatch");
 app.use("/home",homeRouter);
 app.use("/user", userRouter);
+app.use("/store",storeRouter);
 app.use("/StarCraft", StarCraftRouter);
 app.use("/Warcraft", WarcraftRouter);
 app.use("/Overwatch", OverwatchRouter);
