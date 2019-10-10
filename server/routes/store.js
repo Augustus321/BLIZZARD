@@ -14,7 +14,6 @@ router.get("/banners",(req,res) =>{
     switch(kind){
         case "banner":{
             let BannerAll = [];
-
             for (let i = 1; i < 4; i++) {
                 BannerAll.push({
                     bgImg: `store_Banner_${i}.jpg`,
