@@ -11,13 +11,118 @@
 
 <body>
     <header>
-
+        <!-- 首页导航代码 -->
+        <div class="Navbar-overlay"></div>
+        <div class="Navbar-container">
+            <nav class="Navbar-desktop">
+                <a href="../../index.html" class="Navbar-logo">
+                    <img src="http://10.2.0.202:8081/images/store/header_LOGO.png" alt="">
+                </a>
+                <div class="Navbar-items">
+                    <a href="./store.html"><span>商城</span></a>
+                </div>
+            </nav>
+            <div class="Navbar-profileItems">
+                <a href=""><span>支持</span></a>
+                <a id="Navbar-act"><span>我的账户</span><img src="http://10.2.0.202:8081/images/Warcraft/下拉.png" alt=""></a>
+            </div>
+        </div>
+        <!-- 我的账户 -->
+        <div class="Navbar-account">
+            <div class="Navbar-tick"></div>
+            <div class="Navbar-modalSection">
+                <a href="">登录</a>
+            </div>
+            <a href="" class="nav-act">
+                <img src="http://10.2.0.202:8081/images/Warcraft/设置.png" alt="">账户</a>
+            <a href="" class="nav-reg"><img src="http://10.2.0.202:8081/images/Warcraft/注册.png" alt="">免费注册</a>
+        </div>
+        <!-- 首页导航结束 -->
+        <!-- 二层导航 -->
+        <div class="layer-two">
+            <div class="layer-two-box">
+                <div class="layer-two-nav">
+                    <ul class="layer-two-list">
+                        <li>
+                            <a href="javascript:;">
+                                <img src="http://10.2.0.202:8081/images/store/header_house.png" alt=""
+                                    class="list-house">
+                                主页
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                游戏
+                                <img src="http://10.2.0.202:8081/images/store/下拉.png" alt="" class="pull-down">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                服务
+                                <img src="http://10.2.0.202:8081/images/store/下拉.png" alt="" class="pull-down">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                周边商城
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="layer-two-tickets">
+                        <img src="http://10.2.0.202:8081/images/store/header_ticket.png" alt="">
+                        <p>暴雪嘉年华虚拟门票</p>
+                    </div>
+                </div>
+                <div class="layer-two-input">
+                    <div class="layer-two-input-box">
+                        <input type="text" placeholder="搜索商城">
+                        <p><i class="fa fa-search" aria-hidden="true"></i></p>
+                    </div>
+                </div>
+                <div class="layer-two-car">
+                    <a href="javascript:;">
+                        <p><i class="fa fa-heart-o" aria-hidden="true"></i>心愿单</p>
+                    </a>
+                    <a href="javascript:;">
+                        <p>暴雪游戏点数<img src="http://10.2.0.202:8081/images/store/下拉.png" alt="" class="pull-down"></p>
+                    </a>
+                </div>
+            </div>
+        </div>
     </header>
-    <main></main>
+    <main>
+        <!-- 轮播 -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="http://10.2.0.202:8081/images/store/store_Banner_1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="http://10.2.0.202:8081/images/store/store_Banner_2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="http://10.2.0.202:8081/images/store/store_Banner_3.jpg" alt="">
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-prev">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </div>
+            <div class="swiper-next">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+
+        </div>
+    </main>
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="http://10.2.0.202:8081/images/index/footer-logo.png" alt="">
+                <a href="../../index.html">
+                    <img src="http://10.2.0.202:8081/images/store/footer_logo.png" alt="">
+                </a>
             </div>
             <ul class="about-list">
                 <li><a href="https://careers.blizzard.com/zh-cn/">工作机会</a></li>
