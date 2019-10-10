@@ -13,6 +13,14 @@
     }
 }
 
+@keyframes BannerTransform{
+    100%{
+        margin-left: -30px;
+        opacity: 1;
+    }
+}
+
+
 footer {
     background: #002650 !important;
 }
@@ -413,7 +421,37 @@ footer {
 .swiper-container {
     width   : 100%;
     position: relative;
-    height: 300px;
+    height  : 300px;
+
+    .swiper-wrapper {
+        &>div:nth-child(1) {
+            .swiper-image {
+                width: 240px;
+            }
+        }
+        &>div:nth-child(2) {
+            .swiper-image {
+                width: 320px;
+            }
+        }
+
+        &>div:nth-child(3) {
+            .swiper-image {
+                width: 310px;
+            }
+        }
+
+        &>div:nth-child(4) {
+            .swiper-image {
+                width: 240px;
+            }
+        }
+        &>div:nth-child(5) {
+            .swiper-image {
+                width: 320px;
+            }
+        }
+    }
 
     .swiper-prev,
     .swiper-next {
@@ -456,10 +494,6 @@ footer {
         }
     }
 
-    img {
-        width: 100%;
-    }
-
     .swiper-pagination-bullets {
         bottom             : 5%;
         left               : 0;
@@ -480,9 +514,10 @@ footer {
         /* box-shadow: 0 0 2px  #000; */
         margin       : 0 5px;
         outline      : 0;
-        cursor: pointer;
-        transition: background .4s ease;
-        &:hover{
+        cursor       : pointer;
+        transition   : background .4s ease;
+
+        &:hover {
             background: #869791;
         }
     }
@@ -490,10 +525,114 @@ footer {
     /*自定义分页器激活时的样式表现*/
     .swiper-pagination-bullet-active {
         opacity         : 1;
-        background-color: rgba(0,174,255,.8);
-        &:hover{
+        background-color: rgba(0, 174, 255, .8);
+
+        &:hover {
             opacity         : 1;
-        background-color: rgba(0,174,255,.8);
+            background-color: rgba(0, 174, 255, .8);
+        }
+    }
+
+
+
+    .swiper-slide {
+        height: 300px;
+
+        .swiper-box {
+            width              : 100%;
+            height             : 300px;
+            background-size    : 135% !important;
+            background-position: 70% 0 !important;
+            transition         : all 2s linear;
+            position           : relative;
+
+            .swiper-po {
+                position  : absolute;
+                left      : 80px;
+                text-align: center;
+                top       : 45px;
+
+                h5 {
+                    color      : rgba(255, 255, 255, .8);
+                    font-size  : 20px;
+                    font-weight: normal;
+                }
+
+                a {
+                    margin-top      : 15px;
+                    display         : inline-block;
+                    color           : #fff;
+                    background-color: rgb(14, 134, 202);
+                    padding         : 10px 105px;
+                    border          : 1px solid rgb(15, 154, 217);
+
+                    &:hover {
+                        background-color: rgb(0, 174, 255);
+                    }
+                }
+            }
+        }
+    }
+
+    .swiper-slide-active,
+    .swiper-slide-duplicate-active {
+        .swiper-box {
+            background-size    : 126% !important;
+            background-position: 75% 0 !important;
+            transition         : all 2s linear;
+            position           : relative;
+            
+
+            .swiper-po {
+                position  : absolute;
+                left      : 110px;
+                text-align: center;
+                top       : 45px;
+
+                .swiper-image{
+                    opacity: 0;
+                    animation: BannerTransform 1s .3s ease forwards;
+                }
+                .swiper-text{
+                    opacity: 0;
+                    animation: BannerTransform 1s .5s ease forwards;
+                }
+                .swiper-link{
+                    opacity: 0;
+                    animation: BannerTransform 1s .7s ease forwards;
+                }
+
+                h5 {
+                    color      : rgba(255, 255, 255, .8);
+                    font-size  : 20px;
+                    font-weight: normal;
+                }
+
+                a {
+                    margin-top      : 15px;
+                    display         : inline-block;
+                    color           : #fff;
+                    background-color: rgb(14, 134, 202);
+                    padding         : 10px 105px;
+                    border          : 1px solid rgb(15, 154, 217);
+
+                    &:hover {
+                        background-color: rgb(0, 174, 255);
+                    }
+                }
+            }
+        }
+    }
+}
+// 导航
+.store-nav{
+    background-color: rgba(255, 255, 255, 0.05);
+    background-color: #002650;
+    background-image:url(http://10.2.0.202:8081/images/store/header_bg.png);
+    .store-nav-box{
+        padding: 12px 0;
+        h4{
+            line-height: 40px;
         }
     }
 }
