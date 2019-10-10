@@ -14,10 +14,12 @@ router.get("/banners",(req,res) =>{
     switch(kind){
         case "banner":{
             let BannerAll = [];
+            let text = ["解锁虚拟奖励","重温经典传奇","全新的冒险模式"];
             for (let i = 1; i < 4; i++) {
                 BannerAll.push({
                     bgImg: `store_Banner_${i}.jpg`,
-                    imgGame: `store_Banner_im_${i}.png`
+                    imgGame: `store_Banner_im_${i}.png`,
+                    bannerText: text[i - 1]
                 });
             }
             res.send({BannerAll});
