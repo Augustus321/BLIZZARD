@@ -5,8 +5,8 @@ const defaultOptions = {
     host: "127.0.0.1",
     port: "3306",
     user: "root",
-    password: "lzhdmm",
-    database: "BLIZZARD"
+    password: "root",
+    database: "blizzard"
 }
 // 获取connection对象
 function getConnection(options = defaultOptions) {
