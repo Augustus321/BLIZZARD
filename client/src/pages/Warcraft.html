@@ -12,9 +12,10 @@
 <body>
     <!-- 首页导航代码 -->
     <div class="Navbar-overlay"></div>
-    <div class="Navbar-container">
+    <div class="Navbar-container" id="top">
         <nav class="Navbar-desktop">
-            <a href="../../index.html" class="Navbar-logo"><img src="http://10.2.0.202:8081/images/Warcraft/Blizzard-LOGO.png" alt=""></a>
+            <a href="../../index.html" class="Navbar-logo"><img
+                    src="http://10.2.0.202:8081/images/Warcraft/Blizzard-LOGO.png" alt=""></a>
             <div class="Navbar-items">
                 <a id="Navbar-games">
                     <span>游戏</span>
@@ -141,13 +142,13 @@
     <header>
         <nav id="Warcraft-hd">
             <div class="nav">
-                <a href="javascript:;">
+                <a href="#">
                     <img src="http://10.2.0.202:8081/images/Warcraft/LOGO.png" alt="">
                 </a>
-                <a href=""><span>特色</span></a>
-                <a href=""><span>媒体</span></a>
-                <a href=""><span>故事</span></a>
-                <a href=""><span>游戏</span></a>
+                <a href="#trait"><span>特色</span></a>
+                <a href="#media"><span>媒体</span></a>
+                <a href="#story"><span>故事</span></a>
+                <a href="#gameplay"><span>游戏</span></a>
                 <a href=""><span>官方对战平台</span></a>
                 <a href=""><span>论坛</span></a>
             </div>
@@ -173,6 +174,7 @@
         </div>
         <!-- 栅栏 -->
         <div class="Column"></div> <!-- 栅栏 -->
+        <!-- 购买 -->
         <div class="purchase">
             <div class="Section-Content">
                 <div class="spell-book">
@@ -211,13 +213,16 @@
             </div>
         </div>
         <div class="Column"></div> <!-- 栅栏 -->
-        <div class="features">
+        <!-- 产品特征 -->
+        <div class="features" id="trait">
             <div class="background-deepen"></div>
             <div class="features-content">
                 <div></div>
                 <div class="features-right">
-                    <div class="video-click" data-src="http://10.2.0.202:8081/videos/Warcraft_opening_animation.mp4">
-                        <img src="http://10.2.0.202:8081/images/Warcraft/cinematic-trailer.jpg" class="cinematic-trailer" alt="">
+                    <div class="video-click" data-src="http://10.2.0.202:8081/videos/Warcraft_opening_animation.mp4"
+                        data-str="游戏开场动画">
+                        <img src="http://10.2.0.202:8081/images/Warcraft/cinematic-trailer.jpg"
+                            class="cinematic-trailer" alt="">
                         <div class="video-btn"></div>
                         <div class="box-shadow"></div>
                     </div>
@@ -235,7 +240,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="" id="story-section-sub">
+                    <a href="#story" id="story-section-sub">
                         <div class="Row">
                             <div class="Row-left">
                                 <div class="thumbnail"></div>
@@ -247,7 +252,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="" id="gameplay-section-sub">
+                    <a href="#gameplay" id="gameplay-section-sub">
                         <div class="Row">
                             <div class="Row-left">
                                 <div class="thumbnail"></div>
@@ -259,7 +264,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="" id="customgames-section-sub">
+                    <a href="#custom" id="customgames-section-sub">
                         <div class="Row">
                             <div class="Row-left">
                                 <div class="thumbnail"></div>
@@ -275,6 +280,7 @@
             </div>
         </div>
         <div class="Column"></div> <!-- 栅栏 -->
+        <!-- 重置的画面 -->
         <div class="Azeroth" id="media">
             <div class="Azeroth-content">
                 <div class="Azeroth-text">
@@ -284,7 +290,8 @@
                     <span>我们用顶级的模型和渲染技术彻底重塑了《魔兽争霸III》中的每一名英雄、每一个单位、每一座建筑、每一处环境。这是一个你前所未见的艾泽拉斯。</span>
                 </div>
                 <div class="gameplay-trailer">
-                    <div class="gameplay-img">
+                    <div class="gameplay-img" data-src="http://10.2.0.202:8081/videos/Warcraft_Gameplay.mp4"
+                        data-str="游戏预告片">
                         <img src="http://10.2.0.202:8081/images/Warcraft/gameplay-trailer.jpg" alt="">
                         <div class="gameplay-shadow"></div>
                         <div class="video-btn"></div>
@@ -320,19 +327,329 @@
             </div>
         </div>
         <div class="Column"></div> <!-- 栅栏 -->
+        <!-- 传奇战役 -->
         <div id="story">
-            <div class="Section-Background"></div>
+            <div class="Section-Background background">
+                <div class="background-import"></div>
+            </div>
+            <div class="Setion-Background-tow background">
+                <div class="background-import"></div>
+            </div>
+            <div class="Section-content">
+                <div class="title">
+                    <p class="Subtitle">传奇的战役</p>
+                    <h1>魔兽系列的起源故事</h1>
+                    <img src="http://10.2.0.202:8081/images/Warcraft/img-1.png" alt="">
+                </div>
+                <div class="Battle">
+                    <div>
+                        <p>再次回味《魔兽争霸III：混乱之治》以及《魔兽争霸III：冰封王座》的传奇故事。号令神秘的暗夜精灵、阴险的亡灵、野蛮的兽人、高尚的人类，在无情的征战中亦敌亦友，不同的文化碰撞出激烈的火花。
+                        </p>
+                        <ul>
+                            <li><span>62个任务，遍及卡利姆多、洛丹伦、诺森德以及更遥远的世界</span></li>
+                            <li><span>40余小时的史诗级游戏体验，还有4个多小时的重制版过场动画</span></li>
+                            <li><span>操控20余名魔兽故事中的传奇英雄与反派：获取经验、提升等级、掌控强大的技能、提升周围单位的战斗力</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="battle-video" data-src="http://10.2.0.202:8081/videos/Warcraft_TheCullingTrlr.mp4"
+                            data-str="“净化斯坦索姆”预告片">
+                            <img src="http://10.2.0.202:8081/images/Warcraft/war3--campaign-teaser.jpg" alt="">
+                            <div class="gameplay-shadow"></div>
+                            <div class="video-btn"></div>
+                        </div>
+                        <p>战役片段</p>
+                    </div>
+                </div>
+                <div class="chaos-war story-lead">
+                    <div class="chaos-content">
+                        <h2>混乱之战</h2>
+                        <p>人类、兽人和暗夜精灵必须团结一致对抗燃烧军团和他们的亡灵大军。魔兽恢弘的历史篇章徐徐展开，在此见证阿尔萨斯·米奈希尔的悲剧和部落的赎罪。</p>
+                        <div class="space-40"></div>
+                        <p>关键英雄</p>
+                        <div class="space-20"></div>
+                        <div class="Hero-List">
+                            <div class="Hero">
+                                <div class="headpor">
+                                    <div class="headpor-size">
+                                        <div class="hero-img"></div>
+                                    </div>
+                                    <div class="border"></div>
+                                </div>
+                                <p class="Hero-name">阿尔萨斯</p>
+                            </div>
+                            <div class="Hero">
+                                <div class="headpor">
+                                    <div class="headpor-size">
+                                        <div class="hero-img"></div>
+                                    </div>
+                                    <div class="border"></div>
+                                </div>
+                                <p class="Hero-name">萨尔</p>
+                            </div>
+                            <div class="Hero">
+                                <div class="headpor">
+                                    <div class="headpor-size">
+                                        <div class="hero-img"></div>
+                                    </div>
+                                    <div class="border"></div>
+                                </div>
+                                <p class="Hero-name">克尔苏加德</p>
+                            </div>
+                            <div class="Hero">
+                                <div class="headpor">
+                                    <div class="headpor-size">
+                                        <div class="hero-img"></div>
+                                    </div>
+                                    <div class="border"></div>
+                                </div>
+                                <p class="Hero-name">泰兰德</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="frozen-throne story-lead">
+                    <div class="chaos-content">
+                        <h2>冰封王座</h2>
+                        <p>协助哨兵部队踏上阻止伊利丹的征途，带领血精灵前往外域寻求救赎，登上冰封王座之巅，帮助萨尔为兽人在杜隆塔尔建立新的家园。</p>
+                        <div class="space-40"></div>
+                        <p>关键英雄</p>
+                        <div class="space-20"></div>
+                        <div class="Hero-List">
+                            <div class="Hero">
+                                <div class="headpor">
+                                    <div class="headpor-size">
+                                        <div class="hero-img"></div>
+                                    </div>
+                                    <div class="border"></div>
+                                </div>
+                                <p class="Hero-name">玛维</p>
+                            </div>
+                            <div class="Hero">
+                                <div class="headpor">
+                                    <div class="headpor-size">
+                                        <div class="hero-img"></div>
+                                    </div>
+                                    <div class="border"></div>
+                                </div>
+                                <p class="Hero-name">凯尔萨斯</p>
+                            </div>
+                            <div class="Hero">
+                                <div class="headpor">
+                                    <div class="headpor-size">
+                                        <div class="hero-img"></div>
+                                    </div>
+                                    <div class="border"></div>
+                                </div>
+                                <p class="Hero-name">希尔瓦娜斯</p>
+                            </div>
+                            <div class="Hero">
+                                <div class="headpor">
+                                    <div class="headpor-size">
+                                        <div class="hero-img"></div>
+                                    </div>
+                                    <div class="border"></div>
+                                </div>
+                                <p class="Hero-name">雷克萨</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="Column"></div> <!-- 栅栏 -->
+        <div id="gameplay">
+            <div class="game-title">
+                <p class="Subtitle">酣畅的战斗</p>
+                <h1>战场在等待</h1>
+                <img src="http://10.2.0.202:8081/images/Warcraft/img-1.png" alt="">
+                <p>《魔兽争霸III》围绕英雄的即时战略玩法上手易精通难。收集资源，建立基地，集结大军，征募强大的英雄率领你的部队，在战场上和你的敌人一决高下。击溃敌人便能赢得比赛的胜利！</p>
+            </div>
+            <h1>四支强大种族</h1>
+            <!-- 轮播 -->
+            <div class="SectionFullWidth">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-content">
+                                <h2>人类</h2>
+                                <p>人类、精灵和矮人组成了人类联盟。这个阵营面面俱到，他们坐拥威猛的地面与空中部队、可怕的攻城器械，以及强大的施法者。</p>
+                                <img src="http://10.2.0.202:8081/images/Warcraft/swiper-1-img.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-content">
+                                <h2>兽人</h2>
+                                <p>兽人、巨魔和牛头人组成了部落，野蛮的力量和萨满之道的能力便是他们的象征。</p>
+                                <img src="http://10.2.0.202:8081/images/Warcraft/swiper-2-img.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-content">
+                                <h2>亡灵</h2>
+                                <p>作为一支平衡的阵营，亡灵天灾有着坚韧的地面部队和强力的空中单位，凭借阴险的通灵魔法，他们的作战部队在数量上力压其他阵营。</p>
+                                <img src="http://10.2.0.202:8081/images/Warcraft/swiper-3-img.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-content">
+                                <h2>暗夜精灵</h2>
+                                <p>卡利姆多的暗夜精灵在机动性、远程火力和咒术上更胜一筹。虽然在蛮力上不比其他种族，但他们的弓箭与魔法让力气的缺陷变得不值一提。</p>
+                                <img src="http://10.2.0.202:8081/images/Warcraft/swiper-4-img.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination"></div>
 
+                    <!-- 如果需要导航按钮 -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- 如果需要滚动条 -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+            <h1 class="h1-left">英雄展示</h1>
+            <div class="swich">
+                <div class="Art"><img src="http://10.2.0.202:8081/images/Warcraft/Art-hero-1.png" alt=""></div>
+                <div class="Switch-ControlsGroup">
+                    <div class="hero-head checked" data-src="http://10.2.0.202:8081/images/Warcraft/Art-hero-1.png">
+                        <div class="left">
+                            <div class="head-img"></div>
+                        </div>
+                        <div class="text">
+                            <p>恐惧魔王</p>
+                            <span>亡灵</span>
+                        </div>
+                    </div>
+                    <div class="hero-head" data-src="http://10.2.0.202:8081/images/Warcraft/Art-hero-2.png">
+                        <div class="left">
+                            <div class="head-img"></div>
+                        </div>
+                        <div class="text">
+                            <p>剑圣</p>
+                            <span>兽人</span>
+                        </div>
+                    </div>
+                    <div class="hero-head" data-src="http://10.2.0.202:8081/images/Warcraft/Art-hero-3.png">
+                        <div class="left">
+                            <div class="head-img"></div>
+                        </div>
+                        <div class="text">
+                            <p>牛头人酋长</p>
+                            <span>兽人</span>
+                        </div>
+                    </div>
+                    <div class="hero-head" data-src="http://10.2.0.202:8081/images/Warcraft/Art-hero-4.png">
+                        <div class="left">
+                            <div class="head-img"></div>
+                        </div>
+                        <div class="text">
+                            <p>圣骑士</p>
+                            <span>人类</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="custom">
+                <div>
+                    <h1>更上一层的综合体验</h1>
+                    <p>借助现代的多人游戏匹配挑战对手、在自定义游戏大厅中搜寻、用暴雪战网应用与好友互联。有了最新的用户界面和不计其数的体验改善，游玩《魔兽争霸III》变得轻松无比。</p>
+                </div>
+                <div>
+                    <h1>天马行空的自定义游戏</h1>
+                    <p>探索数百万张玩家自制的地图，包括塔防、MOBA、ARPG、生存等等类别，应有尽有，还可以用升级版的地图编辑器打造属于你的地图。</p>
+                </div>
+                <div>
+                    <h1>重新平衡的游戏体验</h1>
+                    <p>我们为英雄、单位、建筑做了数以百计的平衡调整，让《魔兽争霸III》经典的游戏性紧紧跟上了时代。</p>
+                </div>
+                <div><img src="http://10.2.0.202:8081/images/Warcraft/1_war3-website_home_J4Y634G6Z41J1541005858540.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="Column"></div> <!-- 栅栏 -->
+        <div class="com-back">
+            <div class="Background-video">
+                <video loop="true" autoplay="autoplay" muted="muted" class="">
+                    <source src="http://10.2.0.202:8081/videos/bottom-background-video.mp4" type="video/mp4">
+                </video>
+                <div></div>
+            </div>
+            <div class="com-back-content">
+                <h1>听从战争的召唤</h1>
+                <p class="Subtitle">2019 高清重制 王者归来</p>
+                <img src="http://10.2.0.202:8081/images/Warcraft/img-1.png" alt="">
+            </div>
+            <div class="now-buy"><a>立即预购</a></div>
+            <div class="List">
+                <div>
+                    <p>画面彻底重制</p>
+                    <p>62个单人任务，从艾泽拉斯到更为遥远的世界</p>
+                    <p>4小时以上的重制版过场动画</p>
+                    <p>亲切的围绕英雄的游戏体验</p>
+                </div>
+                <div>
+                    <p>来自魔兽故事的四支强大种族</p>
+                    <p>天马行空的自定义游戏等待探索</p>
+                    <p>更新过的用户界面和重新平衡的游戏体验</p>
+                    <p>现代的暴雪战网功能</p>
+                </div>
+            </div>
+        </div>
+        <div class="Column"></div> <!-- 栅栏 -->
         <!-- 弹出视频 -->
         <div id="popBox">
-            <div class="popBox-head">游戏开场动画</div>
+            <div class="popBox-head"></div>
             <div class="popBox-content">
                 <video controls="controls" autoplay="autoplay" preload="auto"></video>
             </div>
             <img src="http://10.2.0.202:8081/images/Warcraft/detail_exit.png" alt="">
         </div>
     </main>
+    <!-- 终于到底部了 -->
+    <footer>
+        <h1>精彩更新，敬请关注</h1>
+        <img src="http://10.2.0.202:8081/images/Warcraft/img-1.png" alt="">
+        <div class="contact">
+            <span class="weibo"></span>
+            <span class="weixin"><img src="http://10.2.0.202:8081/images/Warcraft/1_duizhan_20170321_wx.jpg" alt=""></span>
+        </div>
+        <div class="logo-List">
+            <span class="bliz"></span>
+            <span class="ease"></span>
+        </div>
+        <div class="GlobalFooter">
+            <div class="Navbar-bottom">
+                <span>在线客服</span>
+                <span>反馈</span>
+                <span>加入我们</span>
+                <span>隐私</span>
+                <span>法律条款</span>
+                <span>API</span>
+            </div>
+            <p>©2019 暴雪娱乐有限公司版权所有 由上海网之易网络科技发展有限公司运营</p>
+            <p>著作权侵权 | 沪网文号〔2017〕9633-727号 | 增值电信业务经营许可证编号：沪B2－20080012 | 沪ICP备：沪B2－20080012</p>
+            <p>互联网违法和不良信息举报电话：0571-28090163 沪公网安备 31011502022167号 | 上海市网络游戏行业自律公约</p>
+            <p>适龄提示：适合13岁及以上使用 家长监护工程> | 上海市网络游戏行业自律公约</p>
+            <p>上海市张江高科技园区碧波路690号5号楼301-A | 客服电话：0571-28090163</p>
+            <p>
+                <img src="http://10.2.0.202:8081/images/index/footer_icon_1.gif" alt="">
+                <img src="http://10.2.0.202:8081/images/index/footer_icon_2.gif" alt="">
+                <img src="http://10.2.0.202:8081/images/index/footer_icon_3.gif" alt="">
+                <img src="http://10.2.0.202:8081/images/index/footer_icon_4.gif" alt="">
+                <img src="http://10.2.0.202:8081/images/index/footer_icon_5.png" alt="">
+            </p>
+            <p>健康游戏忠告：抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+        </div>
+    </footer>
+    <!-- 固定 立即预购 -->
+    <div class="preorder">
+        立即预购
+    </div>
+    <!-- 返回顶部 -->
+    <a class="gotop" href="#top">TOP</a>
 </body>
 
 </html>

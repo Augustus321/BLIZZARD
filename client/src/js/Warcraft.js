@@ -1,9 +1,10 @@
 import "../less/index-nav.less";
 import "../less/Warcraft.less";
 import { BASE_URL } from "./lib";
-import "./Navbar"
+import "./Navbar";
+import "../js/Warcraft-swiper";
+import "./Warcraft-animate";
 $(function () {
-
     // 头部逻辑
     // 记录页面滚动距离
     let offset = 0;
@@ -11,6 +12,30 @@ $(function () {
     window.onscroll = function () {
         // 获取窗口滚动的距离
         offset = document.body.scrollTop || document.documentElement.scrollTop;
+        head_fiexd();
+        preorder_fiexd();
+        gotop_fiexd();
+    }
+    // 返回顶部固定
+    function gotop_fiexd(){
+        if (offset > 299) {
+            $(".gotop").addClass("Navshow");
+        }
+        else {
+            $(".gotop").removeClass("Navshow");
+        }
+    }
+    // 立即预购固定
+    function preorder_fiexd (){
+        if (offset > 799) {
+            $(".preorder").addClass("Navshow");
+        }
+        else {
+            $(".preorder").removeClass("Navshow");
+        }
+    }
+    // 头部导航固定
+    function head_fiexd(){
         // this.console.log(window.outerHeight);
         if (offset > 60) {
             $("#Warcraft-hd").addClass("fixed");
@@ -41,7 +66,20 @@ $(function () {
     $(".video-click").click(function(){
         popBox = !popBox;
         let site = $(this).data("src");
-        ViedoShow(site);
+        let str = $(this).data("str");
+        ViedoShow(site,str);
+    })
+    $(".gameplay-img").click(function(){
+        popBox = !popBox;
+        let site = $(this).data("src");
+        let str = $(this).data("str");
+        ViedoShow(site,str);
+    })
+    $(".battle-video").click(function(){
+        popBox = !popBox;
+        let site = $(this).data("src");
+        let str = $(this).data("str");
+        ViedoShow(site,str);
     })
     $(".Navbar-overlay").click(function(){
         popBox = false;
@@ -51,10 +89,11 @@ $(function () {
         popBox = false;
         ViedoShow();
     })
-    function ViedoShow(src){
+    function ViedoShow(src,str){
         if(popBox == true){
             $("#popBox").addClass("Navshow");
-            $(".popBox-content video").html(` <source src="${src}">`);
+            $(".popBox-head").html(`${str}`);
+            $(".popBox-content").html(`<video controls="controls" autoplay="autoplay" preload="auto"><source src="${src}"></video>`);
             $(".popBox-content video").trigger('play');
             $(".Navbar-overlay").addClass("Navshow");
             setTimeout(() => {
@@ -63,9 +102,23 @@ $(function () {
         }else if(popBox == false){
             $("#popBox").removeClass("Navshow");
             $(".popBox-content video").trigger('pause');
-            $(".popBox-content video").html(``);
+            $(".popBox-content video").remove();
+            $(".popBox-head").html(``);
             $(".Navbar-overlay").removeClass("Navshow");
             $("#popBox").removeClass("popBox-animation");
         }
+    }
+
+    // 切换图片
+    $(".hero-head").click(function(){
+        let src = $(this).data("src");
+        let node = $(this);
+        switch_img(src,node);
+    })
+    function switch_img (src,node){
+        $(".Art img").remove();
+        $(".Art").html(`<img src="${src}" />`)
+        $(".hero-head").removeClass('checked');
+        node.addClass("checked");
     }
 })
