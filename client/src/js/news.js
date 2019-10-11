@@ -19,6 +19,7 @@ $(function () {
     //点击去往新闻详情页
     $(".news-im li").on("click", function () {
         console.log($(this).index());
+        console.log(1)
         location.href="./static/pages/newsDetail.html";
     });
 
