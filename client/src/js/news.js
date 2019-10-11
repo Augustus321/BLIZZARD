@@ -18,14 +18,18 @@ $(function () {
 
     //点击去往新闻详情页
     $(".news-im li").on("click", function () {
-        console.log($(this).index());
-        console.log(1)
-        location.href="./static/pages/newsDetail.html";
+        location.href = `./newsDetail.html?id=${$(this).index()}`;
+    });
+
+    let list = document.querySelectorAll(".news-lists .list")
+    console.log(list)
+    $(".news-lists .list").on("click", function () {
+        location.href = `./newsDetail.html?id=${$(this).index()}`;
     });
 
 })
 
-
+loaddingImmg();
 
 
 
@@ -66,8 +70,9 @@ fetch("http://127.0.0.1:8081/news/recentNews")
                     </div>
                 </li>
                 `
-            $(".news-lists").html(htmlStr);
         });
         $(".news-lists").html(htmlStr);
+        $(".news-lists li").on("click", function () {
+            location.href = `./newsDetail.html?id=${$(this).index()}`;
+        });
     })
-loaddingImmg();

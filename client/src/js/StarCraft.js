@@ -1,5 +1,4 @@
 import "../less/StarCraft.less";
-// import "../js/fn.js";
 import {
     loaddingFlash,
     loaddingFooter,
