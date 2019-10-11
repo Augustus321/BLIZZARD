@@ -2,24 +2,29 @@
 // 1. 导入express模块
 const express = require("express");
 // 2. 获取路由对象
-const router  = express.Router();
+const router = express.Router();
 // 3. 处理路由对象
 const getConnection = require("../mysqlConnection");
-/*  ****router内容可自行修改,解开注释******
 router.post("/register", (req, res) => {
-    let {username, password, tel, email} = req.body;
-    let sqlParams = [username, password, tel, email];
-    let sql = "INSERT INTO user (username, password, tel, email) VALUES (?,?,?,?)";
+    let {
+        card,
+        username,
+        password,
+        tel,
+        email
+    } = req.body;
+    let sqlParams = [card, username, password, tel, email];
+    let sql = "INSERT INTO register (card, username, password, tel, email) VALUES (?,?,?,?)";
     let db = getConnection();
     db.connect();
     db.query(sql, sqlParams, (err, sqlRes) => {
-        if(err) {
+        if (err) {
             // 用户已存在
             res.send({
                 status: "201",
                 errMsg: "用户已存在"
             })
-        }else {
+        } else {
             res.send({
                 status: "200",
                 user: req.body
@@ -29,27 +34,29 @@ router.post("/register", (req, res) => {
     db.end();
 })
 router.post("/login", (req, res) => {
-    let {username, password} = req.body;
+    let {
+        username,
+        password
+    } = req.body;
     let sqlParams = [username];
-    let sql = "SELECT * FROM user WHERE username = ?";
+    let sql = "SELECT * FROM register WHERE username = ?";
     let db = getConnection();
     db.connect();
     db.query(sql, sqlParams, (err, sqlRes) => {
-       
-        if(sqlRes.length == 0) {
+        if (sqlRes.length == 0) {
             res.send({
                 status: "202",
                 errMsg: "用户不存在"
             })
-        }else {
+        } else {
             let user = sqlRes[0];
-            if(username == user.username && password == user.password) {
+            if (username == user.username && password == user.password) {
                 delete user.password;
                 res.send({
                     status: "200",
                     user
                 })
-            }else {
+            } else {
                 res.send({
                     status: "203",
                     errMsg: "密码错误"
@@ -58,13 +65,7 @@ router.post("/login", (req, res) => {
         }
     })
     db.end();
-
 });
-*/
 
 // 4. 导出路由
 module.exports = router;
-
-
-
-

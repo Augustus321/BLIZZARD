@@ -41,6 +41,22 @@ router.get("/images/StarCraft", (req, res) => {
             res.send(imageFooter);
         }
         break;
+        case "footer_smm": {
+            let footerSmm = [];
+            for (let i = 1; i <= 5; i++) {
+                imageFooter.push(`footer-smm-${i}.png`);
+            }
+            res.send(footerSmm);
+        }
+        break;
+        case "imageVideo": {
+            let imageVideo = [];
+            for (let i = 1; i <= 5; i++) {
+                imageFooter.push(`imgSm_${i}.png`);
+            }
+            res.send(imageVideo);
+        }
+        break;
     }
 });
 /**

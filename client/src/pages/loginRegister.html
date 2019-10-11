@@ -1,13 +1,72 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>登陆注册</title>
 </head>
-<body>
-    <h1 class="title">wellcome to loginRegister page.</h1>
 
+<body>
+    <div class="box">
+        <div class="logo"></div>
+        <h1>创建账号</h1>
+        <div class="red-btn">
+            <p>网易</p>
+        </div>
+        <div class="box-line">
+            <p class="line"></p>
+            <span>或</span>
+            <p class="line"></p>
+        </div>
+        <div class="register">
+            <p class="register-title">创建暴雪游戏通行证，开启您的冒险旅程。</p>
+            <input type="text" placeholder="身份证号码" class="card input" data-reg="\d{3}">
+            <div class="card-dv dv">
+                <p>请仔细核对并填写您真实有效的个人身份证号码。</p>
+            </div>
+            <input type="text" placeholder="姓名" class="useName input">
+            <input type="text" placeholder="电子邮箱" class="email input" data-reg="\d{3}">
+            <div class="psw">
+                <input type="text" placeholder="密码" class="password input" data-reg="\d{3}">
+                <p class="psw-p">粗糙</p>
+                <ul class="password-dv dv">
+                    <li><span>ⓘ</span>使用8-16个字符。</li>
+                    <li><span>ⓘ</span>使用至少一个数字字符以及一个字母字符。</li>
+                    <li><span>ⓘ</span>请勿使用任何特殊字符。</li>
+                    <li><span>ⓘ</span>请勿使用与您账号名称相似的密码。</li>
+                </ul>
+            </div>
+            <p>+86</p><input type="text" placeholder="手机号码" class="phone-number input" data-reg="\d{3}">
+            <div class="phone-dv dv">
+                <p>您可以通过该手机号码进行修改密码、解除密保等操作。<span>了解详情</span></p>
+            </div>
+            <input type="text" placeholder="验证码" class="code input">
+            <input type="button" value="获取验证码" class="code-btn">
+            <div class="code-dv dv">
+                <p>点击“获取验证码”按钮，通过您填写的手机号码获取验证码。</p>
+            </div>
+            <input type="checkbox" class="change">
+            <p>我已同意并接受<span>隐私政策</span>。</p>
+        </div>
+        <div class="btn-blue">
+            <p>免费注册暴雪游戏通行证</p>
+        </div>
+        <div class="btn-login">
+            <p>已经有通行证了?</p>
+        </div>
+        <p class="agreement">点击“免费注册暴雪游戏通行证”即表示我同意并接受<span>暴雪战网最终用户许可协议</span>。</p>
+    </div>
+    <div class="box-login">
+        <div class="logo"></div>
+        <input type="text" class="user" placeholder="电子邮箱或手机号码">
+        <input type="text" class="psw" placeholder="密码">
+        <div class="login-btn">
+            <p>登录</p>
+        </div>
+
+    </div>
 </body>
+
 </html>

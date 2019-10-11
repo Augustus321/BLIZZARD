@@ -1,6 +1,7 @@
 @import "./normalized.less";
+@import "./footer.less";
+@import "./index-nav.less";
 @import "../../node_modules/swiper/css/swiper.css";
-
 
 .first-box {
     background-image: url(http://10.2.0.202:8081/images/index/first-bg.jpg);
@@ -123,29 +124,32 @@
         width    : 1280px;
         min-width: 1280px;
         margin   : 0 auto;
-        position : relative;
 
         .second-list {
             width          : inherit;
             display        : flex;
             justify-content: space-around;
-            position       : absolute;
-            top: -75px;
+            position       : relative;
+            top            : -75px;
+
             li {
                 .second-homelink {
-                    display: inline-block;
-                    border : 1px solid #3E414A;
-                    width  : 162px;
-                    height : 392px;
+                    display            : inline-block;
+                    border             : 1px solid #3E414A;
+                    width              : 162px;
+                    height             : 392px;
                     background-position: 0 0;
-                    p{
-                        text-align: center;
+
+                    p {
+                        text-align : center;
                         line-height: 50px;
-                        color: #B2BAC7;
+                        color      : #B2BAC7;
                     }
-                    &:hover{
+
+                    &:hover {
                         background-position: -248px 0 !important;
-                        p{
+
+                        p {
                             color: #ffffff;
                         }
                     }
@@ -154,3 +158,4 @@
         }
     }
 }
+
