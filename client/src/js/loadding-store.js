@@ -72,7 +72,7 @@ export function loaddingShop() {
                     $.each(res.contentlist,(_,type) =>{
                         if(type.kindone == "tj"){
                             tjtitle = type.type;
-                            tj = `<li style="background-image:url(${BASE_URL}/images/shopping/${type.shopbg})" class="store-information">
+                            tj = `<li id="${type.id}" style="background-image:url(${BASE_URL}/images/shopping/${type.shopbg})" class="store-information">
                             <div class="store-text-box">
                                 <h2>${type.name}</h2>
                                 <p>${type.title}</p>
@@ -84,7 +84,7 @@ export function loaddingShop() {
                         }
                         if(type.kindone == "jx"){
                             jxtitle = type.type;
-                            jx = `<li style="background-image:url(${BASE_URL}/images/shopping/${type.shopbg})" class="store-information">
+                            jx = `<li id="${type.id}"  style="background-image:url(${BASE_URL}/images/shopping/${type.shopbg})" class="store-information">
                             <div class="store-text-box">
                                 <h2>${type.name}</h2>
                                 <p>${type.title}</p>
@@ -96,7 +96,7 @@ export function loaddingShop() {
                         }
                         if(type.kindone == "dxlx"){
                             dxlxtitle = type.type;
-                            dxlx = `<li style="background-image:url(${BASE_URL}/images/shopping/${type.shopbg})" class="store-information">
+                            dxlx = `<li id="${type.id}"  style="background-image:url(${BASE_URL}/images/shopping/${type.shopbg})" class="store-information">
                             <div class="store-text-box">
                                 <h2>${type.name}</h2>
                                 <p>${type.title}</p>
@@ -108,7 +108,7 @@ export function loaddingShop() {
                         }
                         if(type.kindone == "rmzl"){
                             rmzltitle = type.type;
-                            rmzl = `<li style="background-image:url(${BASE_URL}/images/shopping/${type.shopbg})" class="store-information">
+                            rmzl = `<li id="${type.id}"  style="background-image:url(${BASE_URL}/images/shopping/${type.shopbg})" class="store-information">
                             <div class="store-text-box">
                                 <h2>${type.name}</h2>
                                 <p>${type.title}</p>

@@ -1,12 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>详情页</title>
+    <link rel="shortcut icon" href="http://10.2.0.202:8081/images/store/store_logo.ico" type="image/x-icon">
+    <title>暴雪游戏商城</title>
 </head>
+
 <body>
-    
+    <header>
+        <!-- 首页导航代码 -->
+        <div class="Navbar-overlay"></div>
+        <div class="Navbar-container">
+            <nav class="Navbar-desktop">
+                <a href="../../index.html" class="Navbar-logo">
+                    <img src="http://10.2.0.202:8081/images/store/header_LOGO.png" alt="">
+                </a>
+                <div class="Navbar-items">
+                    <a href="./store.html"><span>商城</span></a>
+                </div>
+            </nav>
+            <div class="Navbar-profileItems">
+                <a href=""><span>支持</span></a>
+                <a id="Navbar-act"><span>我的账户</span><img src="http://10.2.0.202:8081/images/Warcraft/下拉.png" alt=""></a>
+            </div>
+        </div>
+        <!-- 我的账户 -->
+        <div class="Navbar-account">
+            <div class="Navbar-tick"></div>
+            <div class="Navbar-modalSection">
+                <a href="">登录</a>
+            </div>
+            <a href="" class="nav-act">
+                <img src="http://10.2.0.202:8081/images/Warcraft/设置.png" alt="">账户</a>
+            <a href="" class="nav-reg"><img src="http://10.2.0.202:8081/images/Warcraft/注册.png" alt="">免费注册</a>
+        </div>
+        <!-- 首页导航结束 -->
+        <!-- 二层导航 -->
+        <div class="layer-two">
+            <div class="layer-two-box">
+                <div class="layer-two-nav">
+                    <ul class="layer-two-list">
+                        <li>
+                            <a href="javascript:;">
+                                <img src="http://10.2.0.202:8081/images/store/header_house.png" alt=""
+                                    class="list-house">
+                                主页
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                游戏
+                                <img src="http://10.2.0.202:8081/images/store/下拉.png" alt="" class="pull-down">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                服务
+                                <img src="http://10.2.0.202:8081/images/store/下拉.png" alt="" class="pull-down">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                周边商城
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="layer-two-tickets">
+                        <img src="http://10.2.0.202:8081/images/store/header_ticket.png" alt="">
+                        <p>暴雪嘉年华虚拟门票</p>
+                    </div>
+                </div>
+                <div class="layer-two-input">
+                    <div class="layer-two-input-box">
+                        <input type="text" placeholder="搜索商城">
+                        <p><i class="fa fa-search" aria-hidden="true"></i></p>
+                    </div>
+                </div>
+                <div class="layer-two-car">
+                    <a href="./car.html">
+                        <p><i class="fa fa-heart-o" aria-hidden="true"></i>心愿单</p>
+                    </a>
+                    <a href="javascript:;">
+                        <p>暴雪游戏点数<img src="http://10.2.0.202:8081/images/store/下拉.png" alt="" class="pull-down"></p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="store-detail"></div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="../../index.html">
+                    <img src="http://10.2.0.202:8081/images/store/footer_logo.png" alt="">
+                </a>
+            </div>
+            <ul class="about-list">
+                <li><a href="https://careers.blizzard.com/zh-cn/">工作机会</a></li>
+                <li><a href="https://www.blizzard.com/zh-tw/company/about/">关于</a></li>
+                <li><a href="https://www.battlenet.com.cn/support/zh/">支持</a></li>
+                <li><a href="https://blizzard.gamespress.com/zh-CN">媒体中心</a></li>
+                <li><a href="https://develop.battlenet.com.cn/">API</a></li>
+                <li><a href="http://security.blizzard.cn/services/security/">安全中心</a></li>
+            </ul>
+            <div class="copyright">
+                <p>©2019暴雪娱乐有限公司版权所有。</p>
+                <p>在此提及的其他所有<a
+                        href="https://cn.blizzard.com/zh-cn/legal/b04001c4-dc81-480d-a475-5e276e241e4f/%E7%AC%AC%E4%B8%89%E6%96%B9%E6%B3%95%E5%BE%8B%E6%9D%A1%E6%AC%BE">商标</a>均是其各自所有人的财产。
+                </p>
+            </div>
+            <div class="law">
+                <a href="https://www.blizzardgames.cn/zh/legal-cn/privacy">隐私</a>
+                <a href="https://www.blizzardgames.cn/zh/legal-cn/">法律条款</a>
+            </div>
+            <ul class="information">
+                <li>
+                    <p><a
+                            href="http://www.battlenet.com.cn/static/local-common/images/legal/cn/license.png">沪网文〔2017〕9633-727号</a>
+                    </p>
+                    <p><a
+                            href="http://blz.nos.netease.com/1/frame/cprt/appreciation-licence.pdf">增值电信业务经营许可证编号：沪B2－20080012</a>
+                    </p>
+                    <p>沪ICP备: <a href="http://beian.miit.gov.cn/state/outPortal/loginPortal.action">沪B2－20080012</a></p>
+                </li>
+                <li>
+                    <p>互联网违法和不良信息举报电话：0571-28090163</p>
+                    <p>沪公网安备：31011502002167</p>
+                </li>
+                <li>
+                    <p><a href="https://www.battlenet.com.cn/support/zh/article/280">适龄提示：适合13岁及以上使用 家长监护工程></a></p>
+                    <p><a href="http://blz.nos.netease.com/1/frame/cprt/self-discipline.pdf">上海市网络游戏行业自律公约</a></p>
+                </li>
+                <li>
+                    <p>上海市张江高科技园区碧波路690号5号楼301-A</p>
+                    <p>客服电话：0571-28090163</p>
+                </li>
+            </ul>
+            <div class="icon">
+                <a href="http://sh.cyberpolice.cn/infoCategoryListAction.do?act=initjpg">
+                    <img src="http://10.2.0.202:8081/images/index/footer_icon_1.gif" alt="">
+                </a>
+                <a href="http://www.zx110.org/">
+                    <img src="http://10.2.0.202:8081/images/index/footer_icon_2.gif" alt="">
+                </a>
+                <a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=20111011175417664">
+                    <img src="http://10.2.0.202:8081/images/index/footer_icon_3.gif" alt="">
+                </a>
+                <a href="http://www.shjbzx.cn/">
+                    <img src="http://10.2.0.202:8081/images/index/footer_icon_4.gif" alt="">
+                </a>
+                <a
+                    href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/AB216B1F9AA8456582ED680F589334A3">
+                    <img src="http://10.2.0.202:8081/images/index/footer_icon_5.png" alt="">
+                </a>
+            </div>
+            <div class="remind">
+                <p>健康游戏忠告：抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当</p>
+                <p>适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>

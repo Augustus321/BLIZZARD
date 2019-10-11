@@ -52,6 +52,24 @@ router.get("/shopping", (req, res) => {
     db.end();
 });
 
+// 商品详情
+router.get("/detail", (req, res) => {
+    let {kind} = req.query;
+    let sql = `SELECT * FROM shopping WHERE id = '${kind}'`;
+    const db = getConnection();
+    db.connect();
+    db.query(sql,[kind], (err, sqlRes) => {
+        if(err) {
+            console.log(err);
+        }else {
+            res.send({
+                contentlist: sqlRes
+            })
+        }
+    })
+    db.end();
+});
+
 // 4. 导出路由
 module.exports = router;
 
