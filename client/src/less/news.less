@@ -11,6 +11,24 @@ p {
     color: #fff;
 }
 
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font_1449164_e7y54lyhqgv/iconfont.eot');
+    src: url('../font_1449164_e7y54lyhqgv/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../font_1449164_e7y54lyhqgv/iconfont.woff') format('woff'),
+        url('../font_1449164_e7y54lyhqgv/iconfont.ttf') format('truetype'),
+        url('../font_1449164_e7y54lyhqgv/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 body {
     background: no-repeat;
     background-image: url(http://localhost:8081/images/news/news-bg-0.jpg);
@@ -27,8 +45,8 @@ body {
     background-color: rgba(250, 250, 250, 0.1);
 
     .news-menu {
-        width: 1500px;
-        min-width: 1200px;
+        width: 1200px;
+        min-width: 1000px;
         margin: 0 auto;
 
         li {
@@ -61,8 +79,8 @@ body {
 
 
     .news-im {
-        width: 1500px;
-        min-width: 1200px;
+        width: 1200px;
+        min-width: 1000px;
         margin: 0 auto;
         height: 350px;
         display: grid;
@@ -81,23 +99,67 @@ body {
 }
 
 .lists {
+    .news-lists-title {
+        font-size: 24px;
+        line-height: 1.8;
+        font-weight: 700;
+        margin-top: 50px;
+        margin-bottom: 20px;
+
+    }
+
     .news-lists {
         width: 1118px;
         margin: 0 auto;
-
-        p {
-            font-size: 24px;
-            line-height: 1.8;
-            font-weight: 700;
-            margin-top: 50px;
-            margin-bottom: 20px;
-
-        }
 
         li {
             height: 163px;
             border-top: 1px solid rgba(250, 250, 250, 0.2);
             border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+
+            .list {
+                height: 125px;
+                display: flex;
+                flex-direction: row;
+                justify-content: left;
+
+                .comment {
+                    width: 245px;
+                    height: 125px;
+                    background-color: #fff;
+                }
+
+                .comment-none {
+                    display: none;
+                }
+
+                .list-work {
+                    margin-left: 40px;
+
+                    .list-name {
+                        color: hsla(0, 0%, 100%, .2);
+                        font-size: 15px;
+                        line-height: 28px;
+                    }
+
+                    .list-title {
+                        font-weight: 700;
+                        font-size: 25px;
+                        line-height: 50px;
+                    }
+
+                    .list-word {
+                        color: hsla(0, 0%, 100%, .5);
+                        font-size: 13px;
+                        line-height: 30px;
+                    }
+
+                    .list-day {
+                        color: hsla(0, 0%, 100%, .3);
+                        font-size: 13px;
+                    }
+                }
+            }
         }
     }
 }
