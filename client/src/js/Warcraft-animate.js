@@ -1,6 +1,6 @@
 // 
 $(function () {
-    $('a[href*="#trait"],a[href*="#media"],a[href*="#story"],a[href*="#gameplay"],a[href*="#top"]').click(function () {
+    $('a[href*="#trait"],a[href*="#media"],a[href*="#story"],a[href*="#gameplay"],a[href*="#top"],a[href*="#custom"]').click(function () {
         console.log(this.pathname)
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var $target = $(this.hash);
