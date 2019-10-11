@@ -679,7 +679,7 @@ footer {
     background-position: 0 -60px;
 
     .store-shopping-list {
-        padding: 0 30px;
+        padding: 0 10px 0 30px;
 
         .store-type {
             padding-top: 40px;
@@ -690,10 +690,13 @@ footer {
                 font-weight  : normal;
             }
             .store-shopping-list-ul{
-                display: grid;
-                grid-template: ~" repeat(2,432px) / repeat(5,272px)";
-                justify-content: space-between;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: start;
                 .store-information{
+                    margin-right: 20px;
+                    width: 272px;
+                    height: 432px;
                     background-size:  350px auto;
                     background-repeat: no-repeat;
                     background-position: 50% 0;
@@ -713,6 +716,7 @@ footer {
                             color:#ffffff;
                             margin-bottom: 8px;
                             font-weight: normal;
+                            width: 232px;
                         }
                         p{
                             font-size: 15px;

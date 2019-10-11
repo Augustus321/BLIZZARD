@@ -50,29 +50,105 @@ export function loaddingShop() {
         $.ajax({
             url: `${BASE_URL}/store/shopping?kind=all`,
             success(res) {
-                console.log(res)
-                // $(".store-shopping-list").html(`
-                //     <li class="store-type">
-                //         <h1 class="store-title">${res.contentlist[0].type}</h1>
-                //         <ul class="store-shopping-list-ul">
-                //         ${(function () {
-                //         let shopHtmlStr = "";
-                //         $.each(res.contentlist, (_, shops) => {
-                //             shopHtmlStr += `
-                //                 <li style="background-image:url(${BASE_URL}/images/shopping/${shops.shopbg})" class="store-information">
-                //                     <div class="store-text-box">
-                //                         <h2>${shops.name}</h2>
-                //                         <p>${shops.title}</p>
-                //                         <span>${shops.pricetitle}</span>
-                //                     </div>
-                //                 </li>`
-                //         })
-                //         return shopHtmlStr;
-                //     })()}
-                //         </ul>
-                //     </li>`
-                // );
-                // resolve(res.contentlist);
+                console.log(res.contentlist);
+                $(".store-shopping-list").html(`${(function(){
+                    let tj = '';
+                    let tjbox = '';
+                    let tjtitle = '';
+                    let tjHtmlStr = "";
+                    let jx = '';
+                    let jxbox = '';
+                    let jxtitle = '';
+                    let jxHtmlStr = "";
+                    let dxlx = '';
+                    let dxlxbox = '';
+                    let dxlxtitle = '';
+                    let dxlxHtmlStr = "";
+                    let rmzl = '';
+                    let rmzlbox = '';
+                    let rmzltitle = '';
+                    let rmzlHtmlStr = "";
+                    let allHtmlStr = "";
+                    $.each(res.contentlist,(_,type) =>{
+                        if(type.kindone == "tj"){
+                            tjtitle = type.type;
+                            tj = `<li style="background-image:url(${BASE_URL}/images/shopping/${type.shopbg})" class="store-information">
+                            <div class="store-text-box">
+                                <h2>${type.name}</h2>
+                                <p>${type.title}</p>
+                                <span>${type.pricetitle}</span>
+                            </div>
+                        </li>`;
+                            tjbox += tj;
+                            
+                        }
+                        if(type.kindone == "jx"){
+                            jxtitle = type.type;
+                            jx = `<li style="background-image:url(${BASE_URL}/images/shopping/${type.shopbg})" class="store-information">
+                            <div class="store-text-box">
+                                <h2>${type.name}</h2>
+                                <p>${type.title}</p>
+                                <span>${type.pricetitle}</span>
+                            </div>
+                        </li>`;
+                        jxbox += jx;
+                            
+                        }
+                        if(type.kindone == "dxlx"){
+                            dxlxtitle = type.type;
+                            dxlx = `<li style="background-image:url(${BASE_URL}/images/shopping/${type.shopbg})" class="store-information">
+                            <div class="store-text-box">
+                                <h2>${type.name}</h2>
+                                <p>${type.title}</p>
+                                <span>${type.pricetitle}</span>
+                            </div>
+                        </li>`;
+                        dxlxbox += dxlx;
+                            
+                        }
+                        if(type.kindone == "rmzl"){
+                            rmzltitle = type.type;
+                            rmzl = `<li style="background-image:url(${BASE_URL}/images/shopping/${type.shopbg})" class="store-information">
+                            <div class="store-text-box">
+                                <h2>${type.name}</h2>
+                                <p>${type.title}</p>
+                                <span>${type.pricetitle}</span>
+                            </div>
+                        </li>`;
+                        rmzlbox += rmzl;
+                            
+                        }
+                        tjHtmlStr = `<li class="store-type">
+                                            <h1 class="store-title">${tjtitle}</h1>
+                                            <ul class="store-shopping-list-ul">
+                                                ${tjbox}
+                                            </ul>
+                                    </li>`;
+                        jxHtmlStr = `<li class="store-type">
+                                    <h1 class="store-title">${jxtitle}</h1>
+                                    <ul class="store-shopping-list-ul">
+                                        ${jxbox}
+                                    </ul>
+                            </li>`;
+                        dxlxHtmlStr = `<li class="store-type">
+                                            <h1 class="store-title">${dxlxtitle}</h1>
+                                            <ul class="store-shopping-list-ul">
+                                                ${dxlxbox}
+                                            </ul>
+                                    </li>`;
+                        rmzlHtmlStr = `<li class="store-type">
+                                            <h1 class="store-title">${rmzltitle}</h1>
+                                            <ul class="store-shopping-list-ul">
+                                                ${rmzlbox}
+                                            </ul>
+                                    </li>`;            
+                        allHtmlStr = tjHtmlStr + jxHtmlStr + dxlxHtmlStr + rmzlHtmlStr;
+                    })
+                    return allHtmlStr;
+                    
+                })()}`
+                );
+                resolve(res.contentlist);
             }
         })
     })
