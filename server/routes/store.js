@@ -9,7 +9,7 @@ const getConnection = require("../mysqlConnection");
  * 守望先锋
  * kind 参数
  */
-router.get("/banners",(req,res) =>{
+router.get("/images",(req,res) =>{
     let{kind} = req.query;
     switch(kind){
         case "banner":{
@@ -23,6 +23,13 @@ router.get("/banners",(req,res) =>{
                 });
             }
             res.send({BannerAll});
+        }
+        case "nav":{
+            let storeNav = [];
+            for (let i =1; i < 9; i++){
+                storeNav.push(`store_nav_${i}.svg`);
+            }
+            res.send(storeNav);
         }
     }
 })
