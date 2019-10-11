@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding:0;
+    ul,li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+
+body,html{
+    min-width: 1279px;
+    margin:0;
+    scroll-behavior: smooth;
+    background-image: url(https://www.battlenet.com.cn/login/static/images/login/background/login-background-1920.3f7pb.jpg);
+    background-attachment: fixed;
+    background-position: top;
+}
+
+body{.logo{
+        text-align: center;
+        margin-top: 55px;
+        margin-bottom: 40px;
+    }
+    .input{
+        text-align: center;
+        min-width: 290px;
+        max-width: 360px;
+        margin: 0 auto;
+        .login{
+            input{
+                display: block;
+                width: 100%;
+                margin: 20px 0;
+                padding: 0 10px;
+                font-size: 17px;
+                line-height: 20px;
+                height: 40px;
+                outline: none;
+                border: 1px solid rgba(255,255,255,0.3);
+                background-color: rgba(0,0,0,0.5) !important;
+                color: rgba(255,255,255,0.7);
+                box-sizing: border-box;
+                border-radius: 2px;
+                transition: background-position .2s,background-color .2s,border-color .2s,box-shadow .2s;
+                &:focus{
+                    border-color: #1e5f99;
+                    background-color: rgba(0,0,0,0.5) !important;
+                    color: #fff;
+                    transition: background-position .2s,background-color .2s,border-color .2s,box-shadow .2s;
+                }
+            }
+            #login{
+                width: 100%;
+                display: block;
+                margin: 20px 0;
+                font-size: 17px;
+                line-height: 20px;
+                height: 40px;
+                outline: none;
+                background-color: #0e86ca;
+                color: #fff;
+                border: 1px solid #10a1de;
+                cursor: pointer;
+                transition: background-position .2s,background-color .2s,border-color .2s,box-shadow .2s;
+                &:hover{
+                    background-color: #00aeff;
+                    transition: background-position .2s,background-color .2s,border-color .2s,box-shadow .2s;
+                }
+            }
+            .thirdparty-line{
+                width: 100%;
+                font-size: 13px;
+                color: rgba(255,255,255,.3);
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+                &>span{
+                    color: rgba(255,255,255,.3);
+                }
+                p:first-child{
+                    right: 100%;
+                    margin-right: -100px;
+                }
+                p{
+                    display: inline-block;
+                    width: 500px;
+                    content: "";
+                    height: 1px;
+                    background-color: #fff;
+                    background-color: rgba(255,255,255,.1);
+                    position: absolute;
+                    top: 50%;
+                }
+                p:last-child{
+                    left: 100%;
+                    margin-left: -100px;
+                }
+            }
+            #Netease{
+                width: 100%;
+                display: block;
+                margin: 20px 0;
+                font-size: 17px;
+                line-height: 20px;
+                height: 40px;
+                outline: none;
+                background-color: #d60000;
+                color: #fff;
+                border-color: transparent;
+                cursor: pointer;
+                transition: background-position .2s,background-color .2s,border-color .2s,box-shadow .2s;
+                &:hover{
+                    background-color: #f70e0e;
+                    transition: background-position .2s,background-color .2s,border-color .2s,box-shadow .2s;
+                }
+            }
+            &>p{
+                text-align: center;
+                margin: 15px 0;
+                a{
+                    color: #00aeff;
+                    transition: color .2s;
+                    &:hover{
+                        color: #fff;
+                        transition: color .2s;
+                    }
+                }
+            }
+        }
+    }
+}

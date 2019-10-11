@@ -13,7 +13,6 @@ export function loaddingLogo() {
 // 跳转登录页面
 $(function () {
     $(".btn-login").on("click", function () {
-        $(".box").hide();
-        $(".box-login").show();
+        location.href = 'http://localhost:8090/static/pages/login.html';
     });
 })

@@ -4,23 +4,7 @@ import {
 } from "./loadding-loginRegister";
 import "../js/register";
 loaddingLogo();
-
-
-//获取注册登录的按钮
-let card = $(".card");
-let card_dv = $(".card-dv");
-let useName = $(".useName");
-let email = $(".email");
-let password = $(".password");
-let psw_p = $(".psw-p");
-let password_dv = $(".password-dv");
-let phone = $(".phone-number");
-let phone_dv = $(".phone-dv");
-let code = $(".code");
-let code_btn = $(".code-btn");
-let code_dv = $(".code-dv");
-let change = $(".change");
-
+// 表单验证
 $(function () {
     // 密码强度判断
     $(".password").bind("input propertychange",function(event){
@@ -71,9 +55,11 @@ $(function () {
         if (reg.test(loemail.value)) {
             // 合法
             $(".warning").css("display","none");
+            sessionStorage['email-satate'] = true;
         } else {
             // 不合法
             $(".warning").css("display","block");
+            sessionStorage['email-satate'] = false;
         }
     }
 
@@ -81,13 +67,14 @@ $(function () {
     var locard = document.querySelector(".card");
     locard.oninput = function(){
         let reg = new RegExp(this.dataset.reg);
-        console.log(this.dataset.reg);
         if (reg.test(locard.value)) {
             // 合法
             $(".card-warning").css("display","none");
+            sessionStorage['card-satate'] = true;
         } else {
             // 不合法
             $(".card-warning").css("display","block");
+            sessionStorage['card-satate'] = false;
         }
     }
 
@@ -95,13 +82,15 @@ $(function () {
     var lopone = document.querySelector(".phone-number");
     lopone.oninput = function(){
         let reg = new RegExp(this.dataset.reg);
-        console.log(this.dataset.reg);
         if (reg.test(lopone.value)) {
             // 合法
             $(".pone-warning").css("display","none");
+            sessionStorage['pone-satate'] = true;
         } else {
             // 不合法
             $(".pone-warning").css("display","block");
+            sessionStorage['pone-satate'] = false;
         }
     }
+    
 });

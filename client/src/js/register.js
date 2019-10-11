@@ -7,6 +7,10 @@ $(function () {
         alert('请勾选同意并接受隐私政策。')
         return;
     }
+    if((sessionStorage['pone-satate'] == "false") || (sessionStorage['card-satate'] == "false") || (sessionStorage['email-satate'] == "false")){
+        alert("请填写有效字段");
+        return;
+    }
         let user = {
             email: $(".email").val(),
             password: $(".password").val(),
@@ -18,6 +22,7 @@ $(function () {
             alert("请填写所有字段");
             return;
         }
+        
         fetch("http://127.0.0.1:8081/user/register", {
             method: "POST",
             headers: {
@@ -32,10 +37,10 @@ $(function () {
                     alert("该用户已注册，请更换邮箱注册或直接登录。");
                 } else if (data.status == "201") {
                     alert("注册成功！");
-                    sessionStorage['login'] = 1;
-                    sessionStorage['user'] = `${data.errMsg}`;
-                    console.log(data.errMsg);
-                    location.href = "../index.html";
+                    sessionStorage['login'] = "1";
+                    sessionStorage['email']  = `${data.errMsg.email}`;
+                    sessionStorage['name'] = `${data.errMsg.usename}`
+                    location.href = "http://localhost:8090";
                 }
             });
     })

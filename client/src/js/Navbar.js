@@ -34,6 +34,9 @@ $("#Navbar-act").click(function(){
     switchshow();
     esportsshow();
     actshow();
+    if(state == false && esports_state == false && act_state == false){
+        $(".Navbar-overlay").removeClass("Navshow");
+    }
 })
 
 $(".Navbar-overlay").click(function(){
