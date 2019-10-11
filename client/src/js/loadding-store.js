@@ -40,7 +40,6 @@ export function loaddingTab() {
                 </li>`;
             })
             $(".store-nav-list").html(NavHtmlStr);
-            resolve();
         }
     })
 }
@@ -49,7 +48,7 @@ export function loaddingTab() {
 export function loaddingShop() {
     return new Promise((resolve, reject) => {
         $.ajax({
-            url: `${BASE_URL}/store/shopping?kind=推荐`,
+            url: `${BASE_URL}/store/shopping?kind=tj`,
             success(res) {
                 $(".store-shopping-list").html(`
                     <li>
