@@ -700,6 +700,8 @@ footer {
                     overflow: hidden;
                     position: relative;
                     margin-top: 20px;
+                    transition: transform .5s ease;
+                    cursor: pointer;
                     .store-text-box{
                         position:absolute;
                         bottom: 40px;
@@ -724,6 +726,9 @@ footer {
                             position: absolute;
                             bottom: 0;
                         }
+                    }
+                    &:hover{
+                        transform: scale(1.1);
                     }
                 }
             }

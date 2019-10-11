@@ -48,31 +48,31 @@ export function loaddingTab() {
 export function loaddingShop() {
     return new Promise((resolve, reject) => {
         $.ajax({
-            url: `${BASE_URL}/store/shopping?kind=tj`,
+            url: `${BASE_URL}/store/shopping?kind=all`,
             success(res) {
                 console.log(res)
-                $(".store-shopping-list").html(`
-                    <li class="store-type">
-                        <h1 class="store-title">${res.contentlist[0].type}</h1>
-                        <ul class="store-shopping-list-ul">
-                        ${(function () {
-                        let shopHtmlStr = "";
-                        $.each(res.contentlist, (_, shops) => {
-                            shopHtmlStr += `
-                                <li style="background-image:url(${BASE_URL}/images/shopping/${shops.shopbg})" class="store-information">
-                                    <div class="store-text-box">
-                                        <h2>${shops.name}</h2>
-                                        <p>${shops.title}</p>
-                                        <span>${shops.pricetitle}</span>
-                                    </div>
-                                </li>`
-                        })
-                        return shopHtmlStr;
-                    })()}
-                        </ul>
-                    </li>`
-                );
-                resolve(res.contentlist);
+                // $(".store-shopping-list").html(`
+                //     <li class="store-type">
+                //         <h1 class="store-title">${res.contentlist[0].type}</h1>
+                //         <ul class="store-shopping-list-ul">
+                //         ${(function () {
+                //         let shopHtmlStr = "";
+                //         $.each(res.contentlist, (_, shops) => {
+                //             shopHtmlStr += `
+                //                 <li style="background-image:url(${BASE_URL}/images/shopping/${shops.shopbg})" class="store-information">
+                //                     <div class="store-text-box">
+                //                         <h2>${shops.name}</h2>
+                //                         <p>${shops.title}</p>
+                //                         <span>${shops.pricetitle}</span>
+                //                     </div>
+                //                 </li>`
+                //         })
+                //         return shopHtmlStr;
+                //     })()}
+                //         </ul>
+                //     </li>`
+                // );
+                // resolve(res.contentlist);
             }
         })
     })
