@@ -37,7 +37,7 @@ router.get("/images",(req,res) =>{
 // 商品
 router.get("/shopping", (req, res) => {
     let {kind} = req.query;
-    let sql = `SELECT * FROM shopping WHERE kindone = '${kind}'`;
+    let sql = `SELECT * FROM shopping WHERE pages = '${kind}'`;
     const db = getConnection();
     db.connect();
     db.query(sql,[kind], (err, sqlRes) => {
