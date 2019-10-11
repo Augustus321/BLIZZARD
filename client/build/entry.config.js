@@ -6,5 +6,6 @@ module.exports = {
     "Overwatch":"./src/js/Overwatch.js",
     "store":"./src/js/store.js",
     "news":"./src/js/news.js",
-    "newsDetail":"./src/js/newsDetail.js"
+    "newsDetail":"./src/js/newsDetail.js",
+    "login":"./src/js/login.js",
 }
