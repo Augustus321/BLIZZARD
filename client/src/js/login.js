@@ -1,7 +1,7 @@
 import "../less/login.less";
 
 $("#login").click(function(){
-    fetch("http://127.0.0.1:8081/user/login",{
+    fetch("http://10.2.0.202:8081/user/login",{
         method:"POST",
         headers:{
             "Content-Type": "application/json"
@@ -20,7 +20,7 @@ $("#login").click(function(){
             sessionStorage['login'] = "1";
             sessionStorage['email']  = `${data.tishi.email}`;
             sessionStorage['name'] = `${data.tishi.name}`
-            location.href = "http://localhost:8090";
+            history.go(-1);
         }
         else{
             alert('密码有误，请重新登录！');
