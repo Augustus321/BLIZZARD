@@ -10,9 +10,9 @@ const getConnection = require("../mysqlConnection");
  * kind 参数
  */
 router.post("/insert", (req, res) => {
-    let { username,name,title,price,shopbg } = req.body;
-    let sql = "INSERT INTO car (username,name,title,price,shopbg) VALUES (?,?,?,?,?)";
-    let sqlparams = [username, name, title, price, shopbg];
+    let { email,name,title,price,shopbg } = req.body;
+    let sql = "INSERT INTO car (email,name,title,price,shopbg) VALUES (?,?,?,?,?)";
+    let sqlparams = [email, name, title, price, shopbg];
     let db = getConnection();
     db.connect();
     db.query(sql, sqlparams, (err, sqlRes) => {

@@ -11,18 +11,18 @@ import "./logging-status";
 loaddingDetail().then(() => {
     $(".detail-car").on("click", function () {
         // location.href = `./car.html`;
-        if(!sessionStorage["name"]){
+        if(!sessionStorage["email"]){
             alert("请登录！");
             location.href = `./login.html`;
             return;
         }
 
-        let username = "";
-        if(sessionStorage["name"]){
-            username = sessionStorage.name;
+        let email = "";
+        if(sessionStorage["email"]){
+            email = sessionStorage.email;
         }
         let carInformation = {
-            username:username,
+            email:email,
             name: $(".detail-title h3").html(),
             title: $(".detail-title p").html(),
             price: $(".detail-price").html(),
