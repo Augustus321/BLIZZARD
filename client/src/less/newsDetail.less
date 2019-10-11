@@ -31,8 +31,8 @@ p {
 
 body {
     background: no-repeat;
-    background-image: url(http://localhost:8081/images/news/news-bg-0.jpg);
-    background-color: #012650;
+    background-image: url(http://localhost:8081/images/news/news-bg-6.jpg);
+    background-color: #281506;
     background-size: cover cover;
     background-position: -550px 0;
 }
@@ -69,6 +69,123 @@ body {
             line-height: 37px;
             border-bottom: 3px solid #00AEFF;
         }
+    }
+}
+
+.main {
+    width: 1120px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 80px;
+
+    .main-right {
+        float: left;
+        width: 730px;
+
+        .small {
+            font-size: 14.4px;
+            font-weight: 400;
+            color: hsla(0, 0%, 100%, .5);
+        }
+
+        .title {
+            font-weight: 700;
+            font-size: 43.94px;
+            line-height: 1.2;
+            margin: 20px 0;
+        }
+
+        .tem {
+            color: #82c5ff;
+            font-size: 14.4px;
+            font-weight: 400;
+        }
+
+        .day {
+            font-size: 14.4px;
+            font-weight: 400;
+            color: hsla(0, 0%, 100%, .5);
+        }
+
+        >img {
+            width: 730px;
+            height: 410px;
+            margin: 30px 0;
+        }
+
+        .detail,
+        .detail-word {
+            font-weight: 400;
+            line-height: 30px;
+            font-size: 18px;
+            color: hsla(0, 0%, 100%, .8);
+        }
+
+        .detail-title {
+            font-size: 28.134px;
+            line-height: 1.6;
+            font-weight: 300;
+            color: #fff;
+            margin: 20px 0;
+        }
+
+    }
+
+    .main-left {
+        float: right;
+        width: 350px;
+
+        .swiper-container {
+            height: 550px;
+            overflow: hidden;
+
+            .swiper-slide {
+                height: 80px;
+                background-color: rgba(190, 97, 19, .1);
+                color: #fff;
+                margin: 0;
+                font-weight: 400;
+                line-height: 1.7;
+                border-bottom: 1px solid hsla(0, 0%, 100%, .15);
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .swiper-sm-img {
+                    display: block;
+                    width: 80px;
+                    height: 50px;
+                    margin: 15px 15px;
+                    background-image: url(http://localhost:8081/images/loginRegister/bg-big.jpg);
+                }
+
+                .swiper-right {
+                    position: relative;
+                    width: 290px;
+
+                    .swiper-sm-title {
+                        color: hsla(0, 0%, 100%, .3);
+                        font-size: 11px;
+                        margin: 5px 0;
+                    }
+
+                    .swiper-sm-day {
+                        position: absolute;
+                        font-size: 11px;
+                        color: hsla(0, 0%, 100%, .3);
+                        top: 5px;
+                        right: 5px;
+                    }
+
+                    .swiper-sm-word {
+                        font-size: 12.8px;
+                        color: hsla(0, 0%, 100%, .8);
+                    }
+                }
+
+            }
+        }
+
     }
 }
 

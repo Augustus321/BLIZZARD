@@ -8,4 +8,6 @@ module.exports = {
     "news":"./src/js/news.js",
     "newsDetail":"./src/js/newsDetail.js",
     "login":"./src/js/login.js",
+    "car":"./src/js/car.js",
+    "store-detail":"./src/js/store-detail.js"
 }

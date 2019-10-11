@@ -37,7 +37,25 @@ router.get("/images",(req,res) =>{
 // 商品
 router.get("/shopping", (req, res) => {
     let {kind} = req.query;
-    let sql = `SELECT * FROM shopping WHERE kindone = '${kind}'`;
+    let sql = `SELECT * FROM shopping WHERE pages = '${kind}'`;
+    const db = getConnection();
+    db.connect();
+    db.query(sql,[kind], (err, sqlRes) => {
+        if(err) {
+            console.log(err);
+        }else {
+            res.send({
+                contentlist: sqlRes
+            })
+        }
+    })
+    db.end();
+});
+
+// 商品详情
+router.get("/detail", (req, res) => {
+    let {kind} = req.query;
+    let sql = `SELECT * FROM shopping WHERE id = '${kind}'`;
     const db = getConnection();
     db.connect();
     db.query(sql,[kind], (err, sqlRes) => {

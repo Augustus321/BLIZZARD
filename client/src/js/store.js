@@ -34,4 +34,8 @@ loaddingFlash().then(() => {
 loaddingTab();
 
 // 加载商品
-loaddingShop();
+loaddingShop().then(() =>{
+    $(".store-information").on("click", function() {
+        location.href = `./store-detail.html?id=${this.id}`;
+    })
+});

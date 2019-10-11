@@ -45,4 +45,14 @@ module.exports = [
         filename:"static/pages/login.html",
         chunks:["login"]
     }),
+    new HtmlWebpackPlugin({
+        template:"./src/pages/car.html",
+        filename:"static/pages/car.html",
+        chunks:["car"]
+    }),
+    new HtmlWebpackPlugin({
+        template:"./src/pages/store-detail.html",
+        filename:"static/pages/store-detail.html",
+        chunks:["store-detail"]
+    }),
 ]
