@@ -7,10 +7,10 @@ export function loaddingFlash() {
             url: `${BASE_URL}/store/images?kind=banner`,
             success(res) {
                 console.log(res);
-            let {BannerAll} = res;
-            let BannerAllHtmlStr = "";
-            $.each(BannerAll, (_, obj) => {
-                BannerAllHtmlStr += `
+                let { BannerAll } = res;
+                let BannerAllHtmlStr = "";
+                $.each(BannerAll, (_, obj) => {
+                    BannerAllHtmlStr += `
                             <div class="swiper-slide">
                                 <div class="swiper-box"  style="background:url(${BASE_URL}/images/store/${obj.bgImg}) no-repeat;">
                                     <div class="swiper-po">
@@ -20,7 +20,7 @@ export function loaddingFlash() {
                                     </div>
                                 </div>
                             </div>`;
-            });
+                });
                 $(".swiper-wrapper").html(BannerAllHtmlStr);
                 resolve();
             }
@@ -50,24 +50,28 @@ export function loaddingShop() {
         $.ajax({
             url: `${BASE_URL}/store/shopping?kind=tj`,
             success(res) {
+                console.log(res)
                 $(".store-shopping-list").html(`
-                    <li>
-                        <h1 class="title">${res.type}</h1>
-                        <ul>
-                        ${(function() {
-                            let shopHtmlStr = "";
-                            $.each(res.contentlist, (_, shops) => {
-                                shopHtmlStr += `<li style="background:url(${BASE_URL}/images/shopping/${res.shopbg})">
-                                <h2>${res.name}</h2>
-                                <p>${res.title}</p>
-                                <p>${res.pricetitle}</p>
-                            </li>`
-                            })
-                            return shopHtmlStr;
-                        })()}
+                    <li class="store-type">
+                        <h1 class="store-title">${res.contentlist[0].type}</h1>
+                        <ul class="store-shopping-list-ul">
+                        ${(function () {
+                        let shopHtmlStr = "";
+                        $.each(res.contentlist, (_, shops) => {
+                            shopHtmlStr += `
+                                <li style="background-image:url(${BASE_URL}/images/shopping/${shops.shopbg})" class="store-information">
+                                    <div class="store-text-box">
+                                        <h2>${shops.name}</h2>
+                                        <p>${shops.title}</p>
+                                        <span>${shops.pricetitle}</span>
+                                    </div>
+                                </li>`
+                        })
+                        return shopHtmlStr;
+                    })()}
                         </ul>
                     </li>`
-                    );
+                );
                 resolve(res.contentlist);
             }
         })

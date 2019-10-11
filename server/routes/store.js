@@ -40,9 +40,9 @@ router.get("/shopping", (req, res) => {
     let sql = `SELECT * FROM shopping WHERE kindone = '${kind}'`;
     const db = getConnection();
     db.connect();
-    db.query(sql, (err, sqlRes) => {
+    db.query(sql,[kind], (err, sqlRes) => {
         if(err) {
-            console.log(err.message);
+            console.log(err);
         }else {
             res.send({
                 contentlist: sqlRes

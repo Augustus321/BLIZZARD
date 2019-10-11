@@ -13,10 +13,10 @@
     }
 }
 
-@keyframes BannerTransform{
-    100%{
+@keyframes BannerTransform {
+    100% {
         margin-left: -30px;
-        opacity: 1;
+        opacity    : 1;
     }
 }
 
@@ -429,6 +429,7 @@ footer {
                 width: 240px;
             }
         }
+
         &>div:nth-child(2) {
             .swiper-image {
                 width: 320px;
@@ -446,6 +447,7 @@ footer {
                 width: 240px;
             }
         }
+
         &>div:nth-child(5) {
             .swiper-image {
                 width: 320px;
@@ -581,7 +583,7 @@ footer {
             background-position: 75% 0 !important;
             transition         : all 2s linear;
             position           : relative;
-            
+
 
             .swiper-po {
                 position  : absolute;
@@ -589,16 +591,18 @@ footer {
                 text-align: center;
                 top       : 45px;
 
-                .swiper-image{
-                    opacity: 0;
+                .swiper-image {
+                    opacity  : 0;
                     animation: BannerTransform 1s .3s ease forwards;
                 }
-                .swiper-text{
-                    opacity: 0;
+
+                .swiper-text {
+                    opacity  : 0;
                     animation: BannerTransform 1s .5s ease forwards;
                 }
-                .swiper-link{
-                    opacity: 0;
+
+                .swiper-link {
+                    opacity  : 0;
                     animation: BannerTransform 1s .7s ease forwards;
                 }
 
@@ -624,33 +628,42 @@ footer {
         }
     }
 }
+
 // 导航
-.store-nav{
+.store-nav {
+    border-top      : 1px solid rgba(255, 255, 255, .15);
+    border-bottom   : 1px solid rgba(255, 255, 255, .15);
     background-color: rgba(255, 255, 255, 0.05);
     background-color: #002650;
-    background-image:url(http://10.2.0.202:8081/images/store/header_bg.png);
-    .store-nav-box{
-        padding: 12px 0;
+    background-image: url(http://10.2.0.202:8081/images/store/header_bg.png);
+
+    .store-nav-box {
+        padding   : 10px 0;
         text-align: center;
-        h4{
+
+        h4 {
             line-height: 40px;
-            display: inline-block;
-            color: rgba(255, 255, 255, .8);
+            display    : inline-block;
+            color      : rgba(255, 255, 255, .8);
             font-weight: normal;
-            font-size: 14px;
+            font-size  : 14px;
         }
-        .store-nav-list{
+
+        .store-nav-list {
             display: inline-block;
-            li{
-                display: inline-block;
-                margin: 0 8px;
-                cursor: pointer;
+
+            li {
+                display   : inline-block;
+                margin    : 0 8px;
+                cursor    : pointer;
                 transition: all .2s ease;
-                img{
+
+                img {
                     width: 40px;
                 }
-                &:hover{
-                    transform:scale(1.2);
+
+                &:hover {
+                    transform: scale(1.2);
                 }
             }
         }
@@ -658,4 +671,62 @@ footer {
 }
 
 // 商品&详情
+.store-shopping {
+    background-color   : rgba(255, 255, 255, 0.05);
+    background-color   : #002650;
+    background-image   : url(http://10.2.0.202:8081/images/store/header_bg.png);
+    background-repeat  : no-repeat;
+    background-position: 0 -60px;
 
+    .store-shopping-list {
+        padding: 0 30px;
+
+        .store-type {
+            padding-top: 40px;
+
+            .store-title {
+                font-size    : 28px;
+                color        : #ffffff;
+                font-weight  : normal;
+            }
+            .store-shopping-list-ul{
+                display: grid;
+                grid-template: ~" repeat(2,432px) / repeat(5,272px)";
+                justify-content: space-between;
+                .store-information{
+                    background-size:  350px auto;
+                    background-repeat: no-repeat;
+                    background-position: 50% 0;
+                    overflow: hidden;
+                    position: relative;
+                    margin-top: 20px;
+                    .store-text-box{
+                        position:absolute;
+                        bottom: 40px;
+                        width: inherit;
+                        padding: 0 20px;
+                        height: 128px;
+                        h2{
+                            font-size: 18px;
+                            color:#ffffff;
+                            margin-bottom: 8px;
+                            font-weight: normal;
+                        }
+                        p{
+                            font-size: 15px;
+                            color: rgba(255, 255, 255, .3);
+                            margin-bottom: 46px;
+                        }
+                        span{
+                            margin-bottom: 0;
+                            font-size: 16px;
+                            color: #ffffff;
+                            position: absolute;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
