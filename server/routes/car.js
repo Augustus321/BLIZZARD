@@ -9,20 +9,24 @@ const getConnection = require("../mysqlConnection");
  * 购物车
  * kind 参数
  */
-router.post("/", (req, res) => {
-    let {username, order} = req.body;
-    let sqlParams = [username, order];
-    console.log(order)
-    let sql = "INSERT INTO `order` (username, `order`) VALUES (?,?)";
+router.post("/insert", (req, res) => {
+    let { username,name,title,price,shopbg } = req.body;
+    let sql = "INSERT INTO car (username,name,title,price,shopbg) VALUES (?,?,?,?,?)";
+    let sqlparams = [username, name, title, price, shopbg];
     let db = getConnection();
     db.connect();
-    db.query(sql, sqlParams, (err, sqlRes) => {
+    db.query(sql, sqlparams, (err, sqlRes) => {
+        console.log(err);
         if (err) {
-            console.log(err)
-        }else {
+            // 用户已存在
             res.send({
                 status: "200",
-                user: req.body
+                errMsg: "添加失败"
+            })
+        } else {
+            res.send({
+                status: "201",
+                errMsg: req.body
             })
         }
     })
