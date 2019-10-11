@@ -6,9 +6,9 @@ import {
 } from "./loadding-car";
 
 loaddingCar().then(() => {
-    $(".detail-car").on("click",function(){
+    $(".detail-car").on("click", function () {
         let shopid = {
-          id: $(this).data("id")
+            id: $(this).data("id")
         }
         fetch("http://10.2.0.202:8081/car/delete", {
             method: "POST",
@@ -24,10 +24,10 @@ loaddingCar().then(() => {
                     alert("删除失败！");
                 } else if (data.status == "201") {
                     console.log("删除成功！");
-                    
+
                 }
-            });
+            }).then(() => {
+                location.reload();
+            })
     })
-    
-    
 });

@@ -20,7 +20,7 @@ $("#login").click(function(){
             sessionStorage['login'] = "1";
             sessionStorage['email']  = `${data.tishi.email}`;
             sessionStorage['name'] = `${data.tishi.name}`
-            location.href = "http://localhost:8090";
+            history.go(-1);
         }
         else{
             alert('密码有误，请重新登录！');
