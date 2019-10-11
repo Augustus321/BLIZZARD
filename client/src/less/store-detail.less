@@ -308,7 +308,7 @@ footer {
                 background      : linear-gradient(-45deg, #00649c, #0e86ca, #00649c);
                 background-size : 200%;
                 animation       : bgGradient 1000ms infinite alternate;
-                cursor: pointer;
+                cursor          : pointer;
 
                 img {
                     width: 16px;
@@ -411,6 +411,83 @@ footer {
                 &:nth-child(2) {
                     p {
                         padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 商品详情
+.store-detail {
+    .store-detail-box {
+        background-size: cover;
+        height             : 664px;
+        background-position: 50% 0;
+        position           : relative;
+
+        .store-detail-information {
+            background: linear-gradient(to bottom, #272e3b, #1c2534);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, .3);
+            border-top: 2px solid rgba(255, 255, 255, .15);
+            position  : absolute;
+            right     : 50px;
+            top: 50%;
+            transform: translateY(-50%);;
+            border    : 1px solid rgba(255, 255, 255, .15);
+            width: 475px;
+
+            .store-detail-title {
+                padding      : 20px;
+                border-bottom: 1px solid rgba(0, 0, 0, .3);
+                .detail-title{
+                    display: inline-block;
+                    vertical-align: top;
+                    h3{
+                        font-size: 24px;
+                        font-weight: normal;
+                        color: #ffffff;
+                    }
+                    p{
+                        font-size: 14px;
+                        color: #ffffff;
+                    }
+                }
+            }
+            .detail-text{
+                padding: 20px;
+                font-size: 24px;
+                color: #ffffff;
+                display: inline-block;
+                border-bottom: 1px solid rgba(0, 0, 0, .3);
+            }
+            .detail-link{
+                padding: 20px;
+                text-align: center;
+                .detail-buy{
+                    display: block;
+                    padding: 20px 0;
+                    text-align: center;
+                    color: #ffffff;
+                    background-color: #0e86ca;
+                    border-color: #10a1de;
+                    font-size: 18px;
+                    transition: all .3s ease;
+                    margin-bottom: 30px;
+                    &:hover{
+                        background-color: #00aeff;
+                        border-color: #00aeff;
+                    }
+                }
+                .detail-car{
+                    display: inline-block;
+                    margin-bottom: 40px;
+                    font-size: 18px;
+                    color: #00aeff;
+                    transition: color .3s ease;
+                    cursor: pointer;
+                    &:hover{
+                        color: #ffffff;
                     }
                 }
             }

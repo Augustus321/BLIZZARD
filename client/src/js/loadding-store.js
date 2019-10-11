@@ -74,6 +74,7 @@ export function loaddingShop() {
                             tjtitle = type.type;
                             tj = `<li id="${type.id}" style="background-image:url(${BASE_URL}/images/shopping/${type.shopbg})" class="store-information">
                             <div class="store-text-box">
+                                <img class="store-game-logo" src="${BASE_URL}/images/shopping/${type.gamelogo}" width="40px">
                                 <h2>${type.name}</h2>
                                 <p>${type.title}</p>
                                 <span>${type.pricetitle}</span>
@@ -86,6 +87,7 @@ export function loaddingShop() {
                             jxtitle = type.type;
                             jx = `<li id="${type.id}"  style="background-image:url(${BASE_URL}/images/shopping/${type.shopbg})" class="store-information">
                             <div class="store-text-box">
+                                <img class="store-game-logo" src="${BASE_URL}/images/shopping/${type.gamelogo}" width="40px">
                                 <h2>${type.name}</h2>
                                 <p>${type.title}</p>
                                 <span>${type.pricetitle}</span>
@@ -98,6 +100,7 @@ export function loaddingShop() {
                             dxlxtitle = type.type;
                             dxlx = `<li id="${type.id}"  style="background-image:url(${BASE_URL}/images/shopping/${type.shopbg})" class="store-information">
                             <div class="store-text-box">
+                                <img class="store-game-logo" src="${BASE_URL}/images/shopping/${type.gamelogo}" width="40px">
                                 <h2>${type.name}</h2>
                                 <p>${type.title}</p>
                                 <span>${type.pricetitle}</span>
@@ -110,6 +113,7 @@ export function loaddingShop() {
                             rmzltitle = type.type;
                             rmzl = `<li id="${type.id}"  style="background-image:url(${BASE_URL}/images/shopping/${type.shopbg})" class="store-information">
                             <div class="store-text-box">
+                                <img class="store-game-logo" src="${BASE_URL}/images/shopping/${type.gamelogo}" width="40px">
                                 <h2>${type.name}</h2>
                                 <p>${type.title}</p>
                                 <span>${type.pricetitle}</span>
