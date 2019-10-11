@@ -48,7 +48,29 @@ router.get("/introduce", (req, res) => {
     })
     db.end();
 });
-
+router.post("/delete", (req, res) => {
+    let { id } = req.body;
+    let sql = "delete from car where id = ?";
+    let sqlparams = [id];
+    let db = getConnection();
+    db.connect();
+    db.query(sql, sqlparams, (err, sqlRes) => {
+        console.log(err);
+        if (err) {
+            // 用户已存在
+            res.send({
+                status: "200",
+                errMsg: "添加失败"
+            })
+        } else {
+            res.send({
+                status: "201",
+                errMsg: req.body
+            })
+        }
+    })
+    db.end();
+});
 
 
 // 4. 导出路由

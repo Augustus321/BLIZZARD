@@ -10,7 +10,7 @@ import "./logging-status";
 // 加载商品详情
 loaddingDetail().then(() => {
     $(".detail-car").on("click", function () {
-        // location.href = `./car.html`;
+        location.href = `./car.html`;
         if(!sessionStorage["email"]){
             alert("请登录！");
             location.href = `./login.html`;
@@ -27,6 +27,7 @@ loaddingDetail().then(() => {
             title: $(".detail-title p").html(),
             price: $(".detail-price").html(),
             shopbg: $(".store-detail-information").data("img"),
+            gamelogo:$(".store-detail-logo").data("img"),
         }
         fetch("http://10.2.0.202:8081/car/insert", {
             method: "POST",
