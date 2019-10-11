@@ -23,7 +23,7 @@ $(function () {
             return;
         }
         
-        fetch("http://127.0.0.1:8081/user/register", {
+        fetch("http://10.2.0.202:8081/user/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -40,7 +40,7 @@ $(function () {
                     sessionStorage['login'] = "1";
                     sessionStorage['email']  = `${data.errMsg.email}`;
                     sessionStorage['name'] = `${data.errMsg.usename}`
-                    location.href = "http://localhost:8090";
+                    location.href = "localhost:8090";
                 }
             });
     })
