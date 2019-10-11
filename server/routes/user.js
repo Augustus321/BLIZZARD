@@ -14,6 +14,7 @@ router.post("/register", (req, res) => {
     let db = getConnection();
     db.connect();
     db.query(sql, sqlparams, (err, sqlRes) => {
+        console.log(err);
         if (err) {
             // 用户已存在
             res.send({
@@ -23,11 +24,34 @@ router.post("/register", (req, res) => {
         } else {
             res.send({
                 status: "201",
-                user: req.body
+                errMsg: req.body
             })
         }
     })
     db.end();
+})
+
+// 登录
+router.post("/login",(req,res) => {
+    console.log(req.body)
+    let {email,password} = req.body;
+    const db = getConnection();
+    db.connect();
+    db.query("select * from userinfo where email = ?",[email],(err,sqlRes) => {
+        console.log(sqlRes);
+        let user = sqlRes[0];
+        if(email == user.email && password == user.password){
+            res.send({
+                errMsg:"登录成功",
+                tishi:user
+            })
+        }
+        else{
+            res.send({
+                errMsg:"账号或密码错误"
+            })
+        }
+    })
 })
 
 // 4. 导出路由

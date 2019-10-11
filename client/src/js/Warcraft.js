@@ -4,6 +4,7 @@ import { BASE_URL } from "./lib";
 import "./Navbar";
 import "../js/Warcraft-swiper";
 import "./Warcraft-animate";
+import "./logging-status";
 $(function () {
     // 头部逻辑
     // 记录页面滚动距离
