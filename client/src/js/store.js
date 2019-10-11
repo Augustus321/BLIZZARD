@@ -6,6 +6,7 @@ import {
     loaddingTab,
     loaddingShop
 } from "./loadding-store";
+import "./logging-status";
 
 // 加载swiper图片
 loaddingFlash().then(() => {

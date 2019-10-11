@@ -5,6 +5,7 @@ import {
 import {
     BASE_URL
 } from "./lib";
+import "./logging-status";
 
 $(function () {
     //tab选项卡

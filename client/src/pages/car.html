@@ -29,14 +29,18 @@
         </div>
         <!-- 我的账户 -->
         <div class="Navbar-account">
-            <div class="Navbar-tick"></div>
-            <div class="Navbar-modalSection">
-                <a href="">登录</a>
+                <div class="Navbar-tick"></div>
+                <div class="Navbar-modalSection" id="information">
+                    <a href="http://localhost:8090/static/pages/login.html" id="login-url">登录</a>
+                    <div>
+                        <p></p>
+                        <span></span>
+                    </div>
+                </div>
+                <a href="" class="nav-act"><img src="http://10.2.0.202:8081/images/Warcraft/设置.png" alt="">账户</a>
+                <a href="http://localhost:8090/static/pages/loginRegister.html" class="nav-reg"><img src="http://10.2.0.202:8081/images/Warcraft/注册.png" alt="">免费注册</a>
+                <a class="logout"><img src="http://10.2.0.202:8081/images/Warcraft/退出.png" alt="">注销</a>
             </div>
-            <a href="" class="nav-act">
-                <img src="http://10.2.0.202:8081/images/Warcraft/设置.png" alt="">账户</a>
-            <a href="" class="nav-reg"><img src="http://10.2.0.202:8081/images/Warcraft/注册.png" alt="">免费注册</a>
-        </div>
         <!-- 首页导航结束 -->
         <!-- 二层导航 -->
         <div class="layer-two">
@@ -94,6 +98,7 @@
         <div class="car">
             <div class="car-box">
                 <h1>我的心愿单</h1>
+                <ul class="car-list"></ul>
             </div>
         </div>
     </main>

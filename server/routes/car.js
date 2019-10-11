@@ -32,6 +32,23 @@ router.post("/insert", (req, res) => {
     })
     db.end();
 });
+router.get("/introduce", (req, res) => {
+    let {kind} = req.query;
+    let sql = `SELECT * FROM shopping WHERE username = '${kind}'`;
+    const db = getConnection();
+    db.connect();
+    db.query(sql,[kind], (err, sqlRes) => {
+        if(err) {
+            console.log(err);
+        }else {
+            res.send({
+                contentlist: sqlRes
+            })
+        }
+    })
+    db.end();
+});
+
 
 
 // 4. 导出路由
