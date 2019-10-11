@@ -1,25 +1,32 @@
 import "../less/news.less";
 import {
-    loaddingList
+    loaddingImmg
 } from "./loadding-news";
+import {
+    BASE_URL
+} from "./lib";
+
 //tab选项卡
-$(".news-list li").on("click", function () {
-    console.log($(".news-list li").index());
+let color_bd = ["012650", "2D0F0F", "2D1B11", "190938", "0F0F11", "0E1B3E", "281506", "012650"];
+$(".news-menu li").on("click", function () {
+    console.log($(this).index());
     $("body").css({
-        backgroundImage: `url(http://localhost:8081/images/news/news-bg-${$(this).index()}.jpg)`
+        backgroundImage: `url(http://localhost:8081/images/news/news-bg-${$(this).index()}.jpg)`,
+        backgroundColor: `#${color_bd[$(this).index()]}`
     });
 });
 fetch("http://127.0.0.1:8081/news/recentNews")
     .then(response => response.json())
     .then(data => {
-        console.log(data);
         let htmlStr = "";
         data.forEach((list, index) => {
             htmlStr +=
                 `
                 <li>
                     <div class="list">
-                        <img src="" style="width: 245px;">
+                    <div class="list-img">
+                        <img src="${BASE_URL}/images/news/news-list0/list-${index+1}.jpg" style="width: 245px;">
+                    </div>
                         <div class="list-work">
                             <p class="list-name">${data[index].className}</p>
                             <p class="list-title">${data[index].title}</p>
@@ -40,3 +47,4 @@ fetch("http://127.0.0.1:8081/news/recentNews")
         });
         $(".news-lists").html(htmlStr);
     })
+loaddingImmg();
