@@ -5,67 +5,30 @@ const express = require("express");
 const router = express.Router();
 // 3. 处理路由对象
 const getConnection = require("../mysqlConnection");
+
+// 注册
 router.post("/register", (req, res) => {
-    let {
-        card,
-        username,
-        password,
-        tel,
-        email
-    } = req.body;
-    let sqlParams = [card, username, password, tel, email];
-    let sql = "INSERT INTO register (card, username, password, tel, email) VALUES (?,?,?,?)";
+    let { email,password,usename,ID_number,pone } = req.body;
+    let sql = "INSERT INTO userinfo (email,password,name,ID_number,pone) VALUES (?,?,?,?,?)";
+    let sqlparams = [email, password, usename, ID_number, pone];
     let db = getConnection();
     db.connect();
-    db.query(sql, sqlParams, (err, sqlRes) => {
+    db.query(sql, sqlparams, (err, sqlRes) => {
         if (err) {
             // 用户已存在
             res.send({
-                status: "201",
+                status: "200",
                 errMsg: "用户已存在"
             })
         } else {
             res.send({
-                status: "200",
+                status: "201",
                 user: req.body
             })
         }
     })
     db.end();
 })
-router.post("/login", (req, res) => {
-    let {
-        username,
-        password
-    } = req.body;
-    let sqlParams = [username];
-    let sql = "SELECT * FROM register WHERE username = ?";
-    let db = getConnection();
-    db.connect();
-    db.query(sql, sqlParams, (err, sqlRes) => {
-        if (sqlRes.length == 0) {
-            res.send({
-                status: "202",
-                errMsg: "用户不存在"
-            })
-        } else {
-            let user = sqlRes[0];
-            if (username == user.username && password == user.password) {
-                delete user.password;
-                res.send({
-                    status: "200",
-                    user
-                })
-            } else {
-                res.send({
-                    status: "203",
-                    errMsg: "密码错误"
-                })
-            }
-        }
-    })
-    db.end();
-});
 
 // 4. 导出路由
 module.exports = router;
