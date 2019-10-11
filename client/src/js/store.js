@@ -3,7 +3,8 @@ import "./Navbar";
 import Swiper from "swiper";
 import {
     loaddingFlash,
-    loaddingTab
+    loaddingTab,
+    loaddingShop
 } from "./loadding-store";
 
 // 加载swiper图片
@@ -31,3 +32,6 @@ loaddingFlash().then(() => {
 
 // 加载导航选项卡
 loaddingTab();
+
+// 加载商品
+loaddingShop();

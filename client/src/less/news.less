@@ -93,19 +93,50 @@ body {
         li {
             border: 1px solid rgba(250, 250, 250, 0.2);
             height: 281px;
-            background-color: slategray;
+            background-color: rgba(0, 174, 255, .3);
+            overflow: hidden;
+            transition: all .5s;
+            cursor: pointer;
+
+            .imm {
+                width: 280px;
+                height: 147px;
+                transition: all .5s;
+            }
+
+            .news-im-title {
+                color: hsla(0, 0%, 100%, .3);
+                font-size: 14.4px;
+                margin: 15px 25px 5px 25px;
+            }
+
+            .new-im-word {
+                line-height: 1.4;
+                font-weight: 700;
+                font-size: 18px;
+                margin: 15px 25px 5px 25px;
+            }
+        }
+
+        li:hover {
+            background-color: rgba(0, 174, 255, .2);
+        }
+
+        li:hover .imm {
+            transform: scale(1.1);
         }
     }
 }
 
 .lists {
     .news-lists-title {
+        width: 1118px;
+        margin: 0 auto;
         font-size: 24px;
         line-height: 1.8;
         font-weight: 700;
-        margin-top: 50px;
-        margin-bottom: 20px;
-
+        padding-top: 50px;
+        padding-bottom: 20px;
     }
 
     .news-lists {
@@ -117,16 +148,32 @@ body {
             border-top: 1px solid rgba(250, 250, 250, 0.2);
             border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 
+
             .list {
-                height: 125px;
+                height: 165px;
                 display: flex;
                 flex-direction: row;
                 justify-content: left;
+                cursor: pointer;
+                transition: all .3s;
+
+                .list-img {
+                    margin-top: 13px;
+                    height: 125px;
+                    width: 245px !important;
+                }
 
                 .comment {
                     width: 245px;
                     height: 125px;
-                    background-color: #fff;
+                    color: #00A4F3;
+                    padding-right: 10px;
+                    font-size: 13px;
+                    letter-spacing: 4px;
+                }
+
+                .comment:hover {
+                    color: #fff;
                 }
 
                 .comment-none {
@@ -145,13 +192,16 @@ body {
                     .list-title {
                         font-weight: 700;
                         font-size: 25px;
-                        line-height: 50px;
+                        margin-top: 5px;
+                        margin-bottom: 10px;
                     }
 
                     .list-word {
                         color: hsla(0, 0%, 100%, .5);
                         font-size: 13px;
-                        line-height: 30px;
+                        margin-top: 5px;
+                        margin-bottom: 5px;
+                        line-height: 20px;
                     }
 
                     .list-day {
@@ -160,6 +210,95 @@ body {
                     }
                 }
             }
+
+            .list:hover {
+                transform: translateX(20px);
+            }
+
+        }
+
+        li:hover {
+            border: 1px solid rgba(250, 250, 250, 0.2);
+            background-color: rgba(250, 250, 250, 0.1);
+        }
+    }
+}
+
+.more {
+    display: block;
+    background-color: #0e86ca;
+    border: 1px solid #00aeff;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    padding: 10px 50px;
+    margin: 0 auto;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.more:hover {
+    background-color: #00AEFF;
+}
+
+footer {
+    width: 600px;
+    margin: 80px auto;
+
+    .logo {
+        width: 124px;
+        margin: 20px auto;
+    }
+
+    .footer-word,
+    .law-fin {
+        color: hsla(0, 0%, 100%, .7);
+        line-height: 1.4;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .word-fin {
+        padding: 0 10px;
+        cursor: pointer;
+    }
+
+    .line-fin {
+        font-size: 1px;
+        color: hsla(0, 0%, 100%, .3);
+    }
+
+    .word-fin:hover {
+        color: #fff;
+    }
+
+    .copyright,
+    .trademark {
+        font-size: 13px;
+        line-height: 1.4;
+        color: hsla(0, 0%, 100%, .3);
+        text-align: center;
+    }
+
+    .law-fin {
+        font-size: 13px;
+        margin-top: 8px;
+    }
+
+    .icp-fin,
+    .lu-fin {
+        text-align: center;
+        font-size: 11px;
+        color: hsla(0, 0%, 100%, .3);
+    }
+
+    .finn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .lu-fin {
+            line-height: 23px;
         }
     }
 }

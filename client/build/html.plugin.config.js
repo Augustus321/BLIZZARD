@@ -35,4 +35,14 @@ module.exports = [
         filename:"static/pages/news.html",
         chunks:["news"]
     }),
+    new HtmlWebpackPlugin({
+        template:"./src/pages/newsDetail.html",
+        filename:"static/pages/newsDetail.html",
+        chunks:["newsDetail"]
+    }),
+    new HtmlWebpackPlugin({
+        template:"./src/pages/login.html",
+        filename:"static/pages/login.html",
+        chunks:["login"]
+    }),
 ]

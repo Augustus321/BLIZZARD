@@ -6,7 +6,7 @@ const router = express.Router();
 // 3. 处理路由对象
 const getConnection = require("../mysqlConnection");
 /**
- * 守望先锋
+ * 商城
  * kind 参数
  */
 router.get("/images",(req,res) =>{
@@ -32,7 +32,25 @@ router.get("/images",(req,res) =>{
             res.send(storeNav);
         }
     }
-})
+});
+
+// 商品
+router.get("/shopping", (req, res) => {
+    let {kind} = req.query;
+    let sql = `SELECT * FROM shopping WHERE kindone = '${kind}'`;
+    const db = getConnection();
+    db.connect();
+    db.query(sql,[kind], (err, sqlRes) => {
+        if(err) {
+            console.log(err);
+        }else {
+            res.send({
+                contentlist: sqlRes
+            })
+        }
+    })
+    db.end();
+});
 
 // 4. 导出路由
 module.exports = router;
