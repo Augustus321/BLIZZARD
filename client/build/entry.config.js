@@ -4,6 +4,7 @@ module.exports = {
     "StarCraft":"./src/js/StarCraft.js",
     "loginRegister":"./src/js/loginRegister.js",
     "Overwatch":"./src/js/Overwatch.js",
-    "store":"./src/js/store.js"
+    "store":"./src/js/store.js",
+    "news":"./src/js/news.js"
     
 }

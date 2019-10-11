@@ -259,7 +259,7 @@ footer {
     .layer-two-box {
         width  : 95%;
         margin : 0 auto;
-        padding: 0 40px;
+        padding: 0 35px;
 
         .layer-two-nav {
             display: inline-block;
@@ -631,8 +631,30 @@ footer {
     background-image:url(http://10.2.0.202:8081/images/store/header_bg.png);
     .store-nav-box{
         padding: 12px 0;
+        text-align: center;
         h4{
             line-height: 40px;
+            display: inline-block;
+            color: rgba(255, 255, 255, .8);
+            font-weight: normal;
+            font-size: 14px;
+        }
+        .store-nav-list{
+            display: inline-block;
+            li{
+                display: inline-block;
+                margin: 0 8px;
+                cursor: pointer;
+                transition: all .2s ease;
+                img{
+                    width: 40px;
+                }
+                &:hover{
+                    transform:scale(1.2);
+                }
+            }
         }
     }
 }
+
+// 商品

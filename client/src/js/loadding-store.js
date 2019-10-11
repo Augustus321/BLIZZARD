@@ -4,7 +4,7 @@ import { BASE_URL } from "./lib";
 export function loaddingFlash() {
     return new Promise((resolve, reject) => {
         $.ajax({
-            url: `${BASE_URL}/store/banners?kind=banner`,
+            url: `${BASE_URL}/store/images?kind=banner`,
             success(res) {
                 console.log(res);
             let {BannerAll} = res;
@@ -25,5 +25,22 @@ export function loaddingFlash() {
                 resolve();
             }
         })
+    })
+}
+
+// 选项卡
+export function loaddingTab() {
+    $.ajax({
+        url: `${BASE_URL}/store/images?kind=nav`,
+        success(res) {
+            let NavHtmlStr = "";
+            $.each(res, (index, imgname) => {
+                NavHtmlStr += `<li class="tab-control">
+                    <img src="${BASE_URL}/images/store/${imgname}">
+                </li>`;
+            })
+            $(".store-nav-list").html(NavHtmlStr);
+            resolve();
+        }
     })
 }

@@ -2,7 +2,8 @@ import "../less/store.less";
 import "./Navbar";
 import Swiper from "swiper";
 import {
-    loaddingFlash
+    loaddingFlash,
+    loaddingTab
 } from "./loadding-store";
 
 // 加载swiper图片
@@ -28,3 +29,5 @@ loaddingFlash().then(() => {
     })
 })
 
+// 加载导航选项卡
+loaddingTab();
