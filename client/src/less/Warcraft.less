@@ -12,6 +12,8 @@
 body,main,#Warcraft-hd{
     min-width: 1279px;
     margin:0;
+    scroll-behavior: smooth;
+
 }
 
 
@@ -23,13 +25,13 @@ body,main,#Warcraft-hd{
 }
 
 .Subtitle{
-    color: #f8b700;
-    line-height: 1em;
-    letter-spacing: .1em;
-    margin-bottom: .8em;
-    font-weight: 700;
-    font-size: 18px;
-    text-align: center;
+    color: #f8b700 !important;
+    line-height: 1em !important;
+    letter-spacing: .1em !important;
+    margin-bottom: .8em !important;
+    font-weight: 700  !important;
+    font-size: 18px !important;
+    text-align: center !important;
 }
 
 .video-btn{
@@ -190,6 +192,8 @@ main{
         .Section-Content{
             width: 90%;
             margin: 0 auto;
+            min-width: 1200px;
+            max-height: 1780px;
             .spell-book{
                 h1{
                     text-align: center;
@@ -509,7 +513,6 @@ main{
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(4,23.5%);
-            // grid-template-rows: 100%;
             justify-content: space-between;
             align-items: center;
             &>div{
@@ -540,6 +543,493 @@ main{
             }
         }
     }
+
+    // story
+    #story{
+        padding: 220px 40px 100px;
+        position: relative;
+        .Section-Background{
+            &>div{
+                background-image: url('http://10.2.0.202:8081/images/Warcraft/1_war3-website_home_5734U6PBYKED1541005874488.jpg');
+                z-index: 1;
+            }
+        }
+        .Setion-Background-tow{
+            &>div{
+                background-image: url('http://10.2.0.202:8081/images/Warcraft/1_war3-website_home_DYD8HJZA971B1541005873950.jpg');
+                background-position: bottom;
+            }
+        }
+        .Section-content{
+            width: 95%;
+            margin: 0 auto;
+            text-align: center;
+            z-index: 2;
+            position: relative;
+            margin-bottom: 40px;
+            .title{
+                color: #fff;
+                text-align: center;
+                width: 100%;
+                margin-bottom: 50px;
+                h1{
+                    font-weight: 400;
+                    font-size: 48px;
+                    letter-spacing: 5px;
+                    margin-bottom: 18px;
+                }
+            }
+            .Battle{
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 40px;
+                &>div:first-child{
+                    width: 38%;
+                    p{
+                        color: #d9d3c3;
+                        font-size: 18px;
+                        text-align: left;
+                    }
+                    ul{
+                        margin-top: 30px;
+                        li{
+                            font-size: 18px;
+                            margin-bottom: 15px;
+                            color: #d9c898;
+                            line-height: 1.5;
+                            padding-left: 50px;
+                            background: url(http://10.2.0.202:8081/images/Warcraft/war3-website_gou.png) left no-repeat;
+                            text-align: left;
+                            background-size: 36px;
+                        }
+                    }
+                }
+                &>div:last-child{
+                    width: 60%;
+                    position: relative;
+                    img{
+                        width: 100%;
+                    }
+                    .video-btn{
+                        height: 94.5%;
+                    }
+                    p{
+                        color: rgba(255,255,255,.6);
+                    }
+                }
+            }
+            .story-lead{
+                padding: 80px;
+                box-shadow: rgba(0,0,0,.5) 0 15px 40px 4px;
+                border: 2px solid rgba(255,255,255,.15);
+                max-width: 1240px;
+                min-width: 1200px;
+            }
+            .Hero-List{
+                text-align: left;
+                .Hero{
+                    display: inline-block;
+                    width: 120px;
+                    margin-right: 20px;
+                    .headpor{
+                        width: 100px;
+                        margin: 0 10px;
+                        position: relative;
+                        .border{
+                            position: absolute;
+                            left: -9px;
+                            top: -9px;
+                            width: 120px;
+                            height: 120px;
+                            background-size: 240px 120px;
+                            background-image: url(http://10.2.0.202:8081/images/Warcraft/1_war3-website_home_SQH26JYGNOIH1540416333035.png);
+                        }
+                        .headpor-size{
+                            overflow: hidden;
+                            cursor: default;
+                            position: relative;
+                            width: 100%;
+                            height: 100px;
+                            pointer-events: none;
+                            box-shadow: rgba(0,0,0,.5) 0 10px 30px 4px;
+                            overflow: hidden;
+                            border-radius: 50%;
+                            .hero-img{
+                                width: 100%;
+                                height: 100%;
+                                background-image: url(http://10.2.0.202:8081/images/Warcraft/Heroes-list.jpg);
+                                background-size: 400px 400px;
+                                border-radius: 50%;
+                                background-repeat: no-repeat;
+                                transform-origin: left top 0;
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+                    .Hero-name{
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: #d9d3c3;
+                        margin-top: 20px;
+                        text-align: center;
+                    }
+                }
+            }
+            .chaos-war{
+                background-image: url(http://10.2.0.202:8081/images/Warcraft/chaos%20war.jpg);
+                background-position: right top;
+                padding: 80px;
+                margin-bottom: 40px;
+                .Hero-List{
+                    &>div:nth-child(1){
+                        .hero-img{
+                            background-position: 0 0;
+                        }
+                    }
+                    &>div:nth-child(2){
+                        .hero-img{
+                            background-position: -100px 0;
+                        }
+                    }
+                    &>div:nth-child(3){
+                        .hero-img{
+                            background-position: -200px 0;
+                        }
+                    }
+                    &>div:nth-child(4){
+                        .hero-img{
+                            background-position: -300px 0;
+                        }
+                    }
+                }
+                .chaos-content{
+                    width: 50%;
+                    text-align: left;
+                    h2{
+                        font-size: 48px;
+                        font-weight: 400;
+                        color: #fff;
+                        letter-spacing: 3px;
+                        margin-bottom: 15px;
+                    }
+                    p{
+                        font-size: 16px;
+                        color: #d9d3c3;
+                    }
+                }
+            }
+            .frozen-throne{
+                background-image: url(http://10.2.0.202:8081/images/Warcraft/frozen-throne.jpg);
+                background-position: right top;
+                padding: 80px;
+                margin-bottom: 40px;
+                .Hero-List{
+                    &>div:nth-child(1){
+                        .hero-img{
+                            background-position: 0 -100px;
+                        }
+                    }
+                    &>div:nth-child(2){
+                        .hero-img{
+                            background-position: -100px -100px;
+                        }
+                    }
+                    &>div:nth-child(3){
+                        .hero-img{
+                            background-position: -200px -100px;
+                        }
+                    }
+                    &>div:nth-child(4){
+                        .hero-img{
+                            background-position: -300px -100px;
+                        }
+                    }
+                }
+                .chaos-content{
+                    width: 50%;
+                    text-align: left;
+                    margin-left: 50%;
+                    h2{
+                        font-size: 48px;
+                        font-weight: 400;
+                        color: #fff;
+                        letter-spacing: 3px;
+                        margin-bottom: 15px;
+                    }
+                    p{
+                        font-size: 16px;
+                        color: #d9d3c3;
+                    }
+                }
+            }
+        }
+    }
+
+    #gameplay{
+        padding: 60px 15px;
+        padding-bottom: 0;
+        position: relative;
+        background: url(http://10.2.0.202:8081/images/Warcraft/gameplay-background.jpg);
+        background-size: auto;
+        background-position: center top;
+        background-repeat: repeat;
+        .game-title{
+            text-align: center;
+            color: #fff;
+            margin-bottom: 40px;
+            h1{
+                font-size: 40px;
+                font-weight: 400;
+                letter-spacing: 2px;
+                padding-bottom: 15px;
+            }
+            img{
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 18px;
+                color: #cfdce6;
+                max-width: 700px;
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+        .h1-left{
+            text-align: left !important;
+            width: 80%;
+            margin:0 auto;
+        }
+        &>h1{
+            font-weight: 400;
+            font-size: 40px;
+            letter-spacing: 2px;
+            padding-bottom: 15px;
+            color: #fff;
+            text-align: center;
+        }
+        .SectionFullWidth{
+            padding-top: 230px;
+            height: 740px;
+            max-width: 1519px;
+            overflow: hidden;
+            .swiper-pagination{
+                top: -175px;
+                height: 100px;
+                &>span:nth-child(1){
+                    background-position: 0 -200px;
+                }
+                &>span:nth-child(2){
+                    background-position: -100px -200px;
+                }
+                &>span:nth-child(3){
+                    background-position: -200px -200px;
+                }
+                &>span:nth-child(4){
+                    background-position: -300px -200px;
+                }
+                .swiper-pagination-bullet{
+                    opacity: 1;
+                    margin: 0px 30px;
+                    width: 100px;
+                    height: 100px;
+                    cursor: pointer;
+                    background-image: url(http://10.2.0.202:8081/images/Warcraft/Heroes-list.jpg);
+                    background-size: 400px 400px;
+                    border-radius: 50%;
+                    background-repeat: no-repeat;
+                    transform-origin: left top 0;
+                    transform: scale(1.2);
+                    &>div{
+                        position: absolute;
+                        left: -9px;
+                        top: -9px;
+                        width: 120px;
+                        height: 120px;
+                        background-size: 240px 120px;
+                        background-image: url(http://10.2.0.202:8081/images/Warcraft/1_war3-website_home_SQH26JYGNOIH1540416333035.png);
+                    }
+                }
+                .swiper-pagination-bullet-active{
+                    div{
+                        background-position: -120px 0;
+                    }
+                }
+            }
+            .swiper-container{
+                width: 100%;
+                height: 100%;
+                color: #fff;
+                overflow: visible;
+            }
+            .swiper-wrapper{
+                position: relative;
+                width: 100%;
+                .swiper-slide{
+                    cursor: pointer !important;
+                    width: 80% !important;
+                    background-position: 0 0;
+                    height: 700px;
+                    overflow: hidden;
+                    .swiper-content{
+                        width: 34%;
+                        padding-left: 80px;
+                        padding-top: 80px;
+                        text-align: left;
+                        color: #fff;
+                        font-weight: 400;
+                        h2{
+                            font-size: 36px;
+                            line-height: 1.4;
+                            margin-bottom: 10px;
+                            font-weight: 400;
+                        }
+                        p{
+                            font-size: 16px;
+                            line-height: 1.4;
+                            margin-bottom: 60px;
+                            font-weight: 200;
+                            font-family: "weiruanyahei";
+                            color: rgba(255,255,255,.8);
+                        }
+                        img{
+                            width: 300px;
+                        }
+                    }
+                }
+                &>div:nth-child(1){
+                    background-image: url(http://10.2.0.202:8081/images/Warcraft/swiper-1.jpg);
+                }
+                &>div:nth-child(2){
+                    background-image: url(http://10.2.0.202:8081/images/Warcraft/swiper-2.jpg);
+                }
+                &>div:nth-child(3){
+                    background-image: url(http://10.2.0.202:8081/images/Warcraft/swiper-3.jpg);
+                }
+                &>div:nth-child(4){
+                    background-image: url(http://10.2.0.202:8081/images/Warcraft/swiper-4.jpg);
+                }
+            }
+        }
+        .swich{
+            max-width: 1400px;
+            margin:0 auto;
+            height: 800px;
+            position: relative;
+            .Art{
+                position: absolute;
+                top: 0;
+                width: 1200px;
+                height: 800px;
+                left: 50%;
+                transform: translateX(-50%);
+                img{
+                    width: 100%;
+                }
+            }
+            .Switch-ControlsGroup{
+                width: 400px;
+                position: relative;
+                &>div:nth-child(1){
+                    .left{
+                        background-position: -300px -300px;
+                    }
+                }
+                &>div:nth-child(2){
+                    .left{
+                        background-position: -100px -300px;
+                    }
+                }
+                &>div:nth-child(3){
+                    .left{
+                        background-position: -200px -300px;
+                    }
+                }
+                &>div:nth-child(4){
+                    .left{
+                        background-position: 0 -300px;
+                    }
+                }
+                .checked{
+                    .head-img{
+                        background-position: 120px 0 !important;
+                    }
+                }
+                .hero-head{
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    padding: 0 30px;
+                    margin: 65px 0;
+                    cursor: pointer;
+                    z-index: 10;
+                    .left{
+                        width: 100px;
+                        height: 100px;
+                        background-image: url(http://10.2.0.202:8081/images/Warcraft/Heroes-list.jpg);
+                        background-size: 400px 400px;
+                        border-radius: 50%;
+                        background-repeat: no-repeat;
+                        transform-origin: left top 0;
+                        transform: scale(1.2);
+                        .head-img{
+                            position: absolute;
+                            left: -9px;
+                            top: -9px;
+                            width: 120px;
+                            height: 120px;
+                            background-size: 240px 120px;
+                            background-image: url(http://10.2.0.202:8081/images/Warcraft/1_war3-website_home_SQH26JYGNOIH1540416333035.png);
+                            overflow: hidden;
+                        }
+                    }
+                    .text{
+                        padding-left: 60px;
+                        text-align: left;
+                        color: #fff;
+                        padding-top: 28px;
+                        p{
+                            line-height: 1.4;
+                            font-weight: 700;
+                            font-size: 14px;
+                        }
+                        span{
+                            font-size: 16px;
+                            line-height: 1.4;
+                            color: rgba(255,255,255,.5);
+                        }
+                    }
+                }
+            }
+        }
+        #custom{
+            width: 95%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: stretch;
+            margin: 0 auto;
+            div{
+                padding-bottom: 80px;
+                width: 48%;
+                h1{
+                    font-size: 36px;
+                    line-height: 1.4;
+                    margin-bottom: 10px;
+                    font-weight: 400;
+                    color: #fff;
+                }
+                p{
+                    font-size: 18px;
+                    line-height: 1.4;
+                    color: #d9d3c3;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
     // 弹出视频
     #popBox{
         width: 0;
@@ -585,6 +1075,90 @@ main{
             cursor: pointer;
         }
     }
+    .com-back{
+        font-size: 16px;
+        padding: 170px 40px 150px;
+        position: relative;
+        min-width: 1279px;
+        overflow: hidden;
+        text-align: center;
+        .Background-video{
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            video{
+                width: 100%;
+            }
+            div{
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(rgba(22,14,26,0),rgba(22,14,26,.4) 40%,rgba(22,14,26,.5));
+                z-index: 0;
+                position: absolute;
+                top: 0;
+                font-size: 0;
+            }
+        }
+        .com-back-content{
+            position: relative;
+            h1{
+                line-height: 1;
+                color: #fff;
+                font-size: 60px;
+                font-weight: 400;
+                text-align: center;
+                text-shadow: #000 0 3px;
+                margin-bottom: 30px;
+            }
+            p{
+                margin-bottom: 20px !important;
+            }
+        }
+        .now-buy{
+            text-align: center;
+            position: relative;
+            margin-top: 50px;
+            a{
+                display: inline-block;
+                font-size: 24px;
+                height: 75px;
+                width: 250px;
+                line-height: 75px;
+                cursor: pointer;
+                font-weight: 700;
+                color: #33261c;
+                background-image: linear-gradient(rgba(255,255,0,.2) 50%,transparent 50%),linear-gradient(#ffd155,#dca60d);
+                box-shadow: rgba(0,0,0,.8) 0 0 0 2px, rgba(236,174,6,.3) 0 0 40px 20px, rgba(255,255,255,.4) 0 0 0 2px inset, rgba(255,125,19,.4) 0 0 20px 10px inset;
+                text-shadow: #33261c 0 0;
+            }
+        }
+        .List{
+            position: relative;
+            width: 55%;
+            margin: 0 auto;
+            padding-top: 80px;
+            text-align: left;
+            display: grid;
+            grid-template-columns: repeat(2,48%);
+            grid-template-rows: 100%;
+            justify-content: space-between;
+            div{
+                p{
+                    margin-bottom: 10px;
+                    line-height: 1.4;
+                    padding-left: 25px;
+                    font-size: 16px;
+                    color: #d9c898;
+                    background: url(http://10.2.0.202:8081/images/Warcraft/war3-List-start.png) left 2px no-repeat;
+                }
+            }
+        }
+    }
     .Navshow{
         display: block !important;
     }
@@ -594,4 +1168,189 @@ main{
         opacity: 1 !important;
         transition: all 200ms;
     }
+    .background{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+    }
+    .background-import{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background-size: auto;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+    .space-40{
+        height: 40px;
+    }
+    .space-20{
+        height: 20px;
+    }
 }
+
+footer{
+    position: relative;
+    min-width: 1279px;
+    width: 100%;
+    padding-top: 100px;
+    background: url(http://10.2.0.202:8081/images/Warcraft/war3-bottom-background.jpg) no-repeat center top;
+    text-align: center;
+    .logo-List{
+        position: relative;
+        span{
+        display: inline-block;
+        margin: 0 5px;   
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        }
+        .bliz{
+            background-image: url(http://10.2.0.202:8081/images/Warcraft/1_war3-website_home_blz_logo.png);
+            width: 124px;
+            height: 65px;
+        }
+        .ease{
+            background-image: url(http://10.2.0.202:8081/images/Warcraft/1_war3-website_home_logo_ne.png);
+            width: 125px;
+            height: 38px;
+        }
+    }
+    h1{
+        font-weight: 400;
+        color: #fff;
+        font-size: 40px;
+    }
+    &>img{
+        margin: 18px 0;
+    }
+    .contact{
+        padding-bottom: 40px;
+        span{
+            margin: 0 10px;
+        }
+        span:hover{
+            opacity: 1;
+            transition: all ease .2s;
+            cursor: pointer;
+        }
+        .weibo{
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            transition: all ease .2s;
+            background-image: url(http://10.2.0.202:8081/images/Warcraft/1_war3-website_home_social_icon.png);
+            background-size: 135px 64px;
+            background-repeat: no-repeat;
+            opacity: 0.5;
+        }
+        .weixin{
+            position: relative;
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+            transition: all ease .2s;
+            background-image: url(http://10.2.0.202:8081/images/Warcraft/1_war3-website_home_social_icon.png);
+            background-size: 135px 64px;
+            background-repeat: no-repeat;
+            opacity: 0.5;
+            background-position: -68px 0;
+            img{
+                position: absolute;
+                width: 100px;
+                top: -100px;
+                left: -25px;
+                display: none;
+            }
+            &:hover img{
+                display: block;
+            }
+        }
+    }
+    .GlobalFooter{
+        font-size: 16px;
+        line-height: 1;
+        color: #d9d3c3;
+        padding: 20px 0;
+        .Navbar-bottom{
+            margin: 0 auto;
+            span{
+                display: inline-block;
+                font-size: 17px;
+                color: rgba(255,255,255,.7);
+                padding: 0 15px;
+                margin: 20px 0;
+                border-right: 1px solid rgba(255,255,255,.7);
+                cursor: pointer;
+                &:last-child{
+                    border: none;
+                }
+            }
+        }
+        p{
+            font-size: 13px;
+            color: rgba(255,255,255,.3);
+            line-height: 1.4;
+            img{
+                height: 25px;
+                margin: 5px 3px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// 固定定位 立即预购
+.preorder{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 1000;
+    cursor: pointer;
+    line-height: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fcd211;
+    background-image: linear-gradient(rgba(102,204,255,.07) 50%,transparent 50%),linear-gradient(#2e3bb0,#202764);
+    box-shadow: rgba(0,0,0,.8) 0 0 0 2px, rgba(11,160,255,.3) 0 0 30px 10px, rgba(188,189,204,.3) 0 0 0 2px inset, rgba(72,171,255,.25) 0 0 20px 10px inset;
+    background-color: transparent;
+    font-size: 17px;
+    height: 50px;
+    border-width: 0;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 2px;
+    background-repeat: no-repeat;
+    outline: 0;
+    text-decoration: none;
+    padding: 0 35px;
+    display: none;
+}
+
+.gotop{
+    width: 40px;
+    height: 30px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255,255,255,.25);
+    color: #000;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 12px;
+    z-index: 501;
+    font-weight: 700;
+    text-decoration: none;
+    display: none;
+    cursor: pointer;
+}
+
+.Navshow{
+    display: block !important;
+}
+
+@import "../../node_modules/swiper/css/swiper.min.css";
