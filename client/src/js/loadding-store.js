@@ -44,3 +44,33 @@ export function loaddingTab() {
         }
     })
 }
+
+// 商品
+export function loaddingShop() {
+    return new Promise((resolve, reject) => {
+        $.ajax({
+            url: `${BASE_URL}/store/shopping?kind=推荐`,
+            success(res) {
+                $(".store-shopping-list").html(`
+                    <li>
+                        <h1 class="title">${res.type}</h1>
+                        <ul>
+                        ${(function() {
+                            let shopHtmlStr = "";
+                            $.each(res.contentlist, (_, shops) => {
+                                shopHtmlStr += `<li style="background:url(${BASE_URL}/images/shopping/${res.shopbg})">
+                                <h2>${res.name}</h2>
+                                <p>${res.title}</p>
+                                <p>${res.pricetitle}</p>
+                            </li>`
+                            })
+                            return shopHtmlStr;
+                        })()}
+                        </ul>
+                    </li>`
+                    );
+                resolve(res.contentlist);
+            }
+        })
+    })
+}
