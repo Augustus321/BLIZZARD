@@ -34,7 +34,7 @@ router.post("/insert", (req, res) => {
 });
 router.get("/introduce", (req, res) => {
     let {kind} = req.query;
-    let sql = `SELECT * FROM shopping WHERE username = '${kind}'`;
+    let sql = `SELECT * FROM car WHERE email = '${kind}'`;
     const db = getConnection();
     db.connect();
     db.query(sql,[kind], (err, sqlRes) => {
