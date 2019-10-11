@@ -25,4 +25,14 @@ module.exports = [
         filename:"static/pages/Overwatch.html",
         chunks:["Overwatch"]
     }),
+    new HtmlWebpackPlugin({
+        template:"./src/pages/store.html",
+        filename:"static/pages/store.html",
+        chunks:["store"]
+    }),
+    new HtmlWebpackPlugin({
+        template:"./src/pages/news.html",
+        filename:"static/pages/news.html",
+        chunks:["news"]
+    }),
 ]

@@ -6,10 +6,10 @@ export function loaddingHeader(){
             url:`${BASE_URL}/Overwatch/videos?kind=Overwatch-header`,
             success(res){
                 let headerVideo = "";
-                headerVideo = `<video src="${BASE_URL}/videos/Overwatch-header.mp4"></video>`
+                headerVideo = `<video src="${BASE_URL}/videos/Overwatch-header.mp4" autoplay loop></video>`
                 console.log(headerVideo);
                 
-                $("header-video").html(headerVideo);
+                $(".header-video").html(headerVideo);
                 resolve();
             }
         })

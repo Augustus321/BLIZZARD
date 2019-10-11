@@ -1,0 +1,660 @@
+@import "./footer.less";
+@import "./normalized.less";
+@import "../../node_modules/font-awesome/css/font-awesome.min.css";
+@import "../../node_modules/swiper/css/swiper.min.css";
+
+@keyframes bgGradient {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes BannerTransform{
+    100%{
+        margin-left: -30px;
+        opacity: 1;
+    }
+}
+
+
+footer {
+    background: #002650 !important;
+}
+
+// 头部导航
+.Navbar-container {
+    width           : 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    background-color: #002650;
+    background-image: url(http://10.2.0.202:8081/images/store/header_bg.png);
+    position        : relative;
+    border-bottom   : 1px rgb(47, 85, 132) solid;
+    z-index         : 201;
+
+    .Navbar-desktop {
+        width   : calc(~"100% - 80px");
+        margin  : 0 auto;
+        position: relative;
+
+        .Navbar-logo {
+            width       : 79px;
+            height      : 40px;
+            margin-right: 30px;
+            overflow    : hidden;
+            display     : inline-block;
+
+            img {
+                width    : 61px;
+                transform: translateY(25%);
+            }
+        }
+
+        .Navbar-items {
+            display       : inline-block;
+            vertical-align: top;
+
+            a {
+                position    : relative;
+                display     : inline-block;
+                padding     : 0;
+                font-family : "Blizzard", Helvetica, Arial, sans-serif;
+                font-size   : 15px;
+                line-height : 1.4;
+                color       : rgba(255, 255, 255, 0.7);
+                background  : transparent;
+                white-space : nowrap;
+                transition  : color 200ms, background-color 200ms, border-color 200ms;
+                margin-right: 30px;
+                cursor      : pointer;
+
+                &:hover {
+                    color: #ffffff;
+                }
+
+                span {
+                    line-height: 41px;
+                    display    : inline-block;
+                }
+
+                img {
+                    width: 16px;
+                }
+            }
+        }
+    }
+
+    .Navbar-profileItems {
+        position   : absolute;
+        top        : 0;
+        right      : 40px;
+        line-height: 41px;
+
+        a {
+            color    : hsla(0, 0%, 100%, .7);
+            font-size: 15px;
+            cursor   : pointer;
+
+            &:hover {
+                color: #ffffff;
+
+                img {
+                    opacity: 1;
+                }
+            }
+
+            &:first-child {
+                margin-right: 30px;
+            }
+
+            img {
+                width  : 16px;
+                opacity: .5;
+            }
+        }
+    }
+}
+
+// 固定头部蒙版
+.Navbar-overlay {
+    width           : 100%;
+    height          : 100%;
+    position        : fixed;
+    top             : 0;
+    bottom          : 0;
+    left            : 0;
+    right           : 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index         : 200;
+    display         : none;
+}
+
+// 我的账户
+.Navbar-account {
+    position  : absolute;
+    top       : 61px;
+    right     : 20px;
+    width     : 320px;
+    border    : 1px solid #454545;
+    border-top: none;
+    background: radial-gradient(ellipse farthest-side at center top, #283244 0, rgba(21, 26, 35, .95) 100%);
+    height    : 168px;
+    z-index   : 201;
+    display   : none;
+
+    .Navbar-tick {
+        width           : 10px;
+        height          : 10px;
+        border-top      : solid 1px rgba(255, 255, 255, 0.15);
+        border-right    : solid 1px rgba(255, 255, 255, 0.15);
+        display         : inline-block;
+        background-color: #151e20;
+        position        : absolute;
+        transform       : rotatez(-45deg);
+        top             : -6px;
+        right           : 20px;
+    }
+
+    .Navbar-modalSection {
+        width        : 100%;
+        border-bottom: 1px solid #454545;
+        text-align   : center;
+
+        &>a {
+            color           : #fff;
+            font-size       : 16px;
+            font-weight     : 400;
+            display         : inline-block;
+            width           : 278px;
+            height          : 38px;
+            line-height     : 38px;
+            margin          : 20px auto;
+            text-align      : center;
+            cursor          : pointer;
+            background-color: #0e86ca;
+            border          : solid 1px #00aeff;
+            transition      : all 200ms;
+
+            &:hover {
+                background-color: #00aeff;
+                transition      : all 200ms;
+            }
+        }
+    }
+
+    &>a {
+        transition : all 200ms;
+        display    : block;
+        padding    : 0 20px;
+        height     : 44px;
+        line-height: 44px;
+        font-size  : 16px;
+        color      : rgba(255, 255, 255, .7);
+        text-align : left;
+
+        &:hover {
+            color           : #fff;
+            background-color: rgba(255, 255, 255, .05);
+            transition      : all 200ms;
+        }
+
+        img {
+            width       : 24px;
+            transform   : translateY(7px);
+            margin-right: 10px;
+        }
+    }
+
+    .nav-act {
+        border-bottom: 1px solid #454545;
+    }
+}
+
+.white {
+    color: #ffffff;
+}
+
+.Navshow {
+    display: block;
+}
+
+.rotate {
+    transform: rotateZ(180deg);
+}
+
+@keyframes Showdown {
+    from {
+        transform: translateY(-10px);
+        opacity  : 0;
+    }
+
+    to {
+        transform: none;
+        opacity  : 1;
+    }
+}
+
+.Navbar-container,
+.Navbar-modal,
+.Navbar-dropdown {
+    min-width: 1279px;
+}
+
+// 最小宽度
+@media screen and (max-width:1295px) {
+    .Navbar-account {
+        left: 936px;
+    }
+}
+
+// 二层菜单
+.layer-two {
+    width           : 100%;
+    background-color: #032041;
+    border-bottom   : 1px rgba(255, 255, 255, .15) solid;
+
+    .layer-two-box {
+        width  : 95%;
+        margin : 0 auto;
+        padding: 0 35px;
+
+        .layer-two-nav {
+            display: inline-block;
+            width  : 530px;
+
+            .layer-two-list {
+                display: inline-block;
+
+                li {
+                    display    : inline-block;
+                    line-height: 50px;
+                    margin     : 0 15px;
+
+                    a {
+                        color     : rgba(255, 255, 255, .8);
+                        font-size : 14px;
+                        transition: color .2s linear;
+
+                        .list-house {
+                            height: 40px;
+                        }
+
+                        .pull-down {
+                            width     : 16px;
+                            opacity   : .8;
+                            transition: opacity .2s linear;
+                        }
+
+                        &:hover {
+                            color: rgb(255, 255, 255);
+
+                            .pull-down {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .layer-two-tickets {
+                display         : inline-block;
+                padding         : 7px;
+                border-radius   : 3px;
+                border          : 1px rgba(255, 255, 255, .15) solid;
+                background-color: #00649c;
+                background      : linear-gradient(-45deg, #00649c, #0e86ca, #00649c);
+                background-size : 200%;
+                animation       : bgGradient 2000ms infinite alternate;
+
+                img {
+                    width: 16px;
+                }
+
+                p {
+                    display    : inline-block;
+                    font-weight: 600;
+                    font-size  : 14px;
+                    color      : rgba(255, 255, 255, .8);
+                }
+
+                &:hover {
+                    animation: bgGradient 1000ms infinite alternate;
+                }
+            }
+        }
+
+        .layer-two-input {
+            width   : 688px;
+            display : inline-block;
+            position: relative;
+
+            .layer-two-input-box {
+                width    : 480px;
+                position : relative;
+                position : absolute;
+                top      : 50%;
+                transform: translateY(-60%);
+                right    : 15px;
+
+                p {
+                    position   : absolute;
+                    line-height: 35px;
+                    left       : 10px;
+                    font-size  : 14px;
+                    color      : #0e86ca;
+                    top        : ~"calc(50% - 17px)"
+                }
+
+                input {
+                    width       : inherit;
+                    line-height : 35px;
+                    padding-left: 36px;
+                    background  : #001732;
+                    border      : 1px solid rgba(255, 255, 255, .15);
+                    color       : rgba(255, 255, 255, .8);
+                    transition  : padding-bottom .2s linear, padding-top .2s linear;
+                    box-sizing  : border-box;
+
+                    &::-webkit-input-placeholder {
+                        color     : rgba(255, 255, 255, .8);
+                        transition: all .2s linear;
+                    }
+
+                    &:focus {
+                        padding-bottom: 6px;
+                        padding-top   : 7.8px;
+
+                        &::-webkit-input-placeholder {
+                            color: rgba(255, 255, 255, .5);
+                        }
+                    }
+                }
+            }
+        }
+
+        .layer-two-car {
+            display: inline-block;
+
+            p {
+                color      : rgba(255, 255, 255, .8);
+                border-left: 1px solid rgba(255, 255, 255, .15);
+                line-height: 50px;
+                padding    : 0 15px;
+                font-size  : 14px;
+                display    : inline-block;
+                transition : color .2s linear;
+
+                i {
+                    margin-right: 5px;
+                }
+
+                img {
+                    width     : 16px;
+                    opacity   : .5;
+                    transition: opacity .2s linear;
+                }
+
+                &:hover {
+                    color: #ffffff;
+
+                    img {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            a {
+                &:nth-child(2) {
+                    p {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 轮播
+.swiper-container {
+    width   : 100%;
+    position: relative;
+    height  : 300px;
+
+    .swiper-wrapper {
+        &>div:nth-child(1) {
+            .swiper-image {
+                width: 240px;
+            }
+        }
+        &>div:nth-child(2) {
+            .swiper-image {
+                width: 320px;
+            }
+        }
+
+        &>div:nth-child(3) {
+            .swiper-image {
+                width: 310px;
+            }
+        }
+
+        &>div:nth-child(4) {
+            .swiper-image {
+                width: 240px;
+            }
+        }
+        &>div:nth-child(5) {
+            .swiper-image {
+                width: 320px;
+            }
+        }
+    }
+
+    .swiper-prev,
+    .swiper-next {
+        opacity         : 0;
+        transition      : all .3s ease;
+        position        : absolute;
+        top             : 50%;
+        transform       : translateY(-50%);
+        z-index         : 1000;
+        background-color: rgba(0, 0, 0, .6);
+        padding         : 20px 10px;
+        cursor          : pointer;
+
+        i {
+            font-size  : 40px;
+            font-weight: bolder;
+            color      : #009ae4;
+        }
+
+        &:hover {
+            i {
+                color: #91e4ff;
+            }
+        }
+    }
+
+    .swiper-prev {
+        left: 20px;
+    }
+
+    .swiper-next {
+        right: 20px;
+    }
+
+    &:hover {
+
+        .swiper-prev,
+        .swiper-next {
+            opacity: 1;
+        }
+    }
+
+    .swiper-pagination-bullets {
+        bottom             : 5%;
+        left               : 0;
+        width              : 100%;
+        height             : 20px;
+        /* background-color: red; */
+        text-align         : center;
+    }
+
+    /*自定义分页器的样式，这个你自己想要什么样子自己写*/
+    .swiper-pagination-bullet {
+        width        : 100px;
+        height       : 5px;
+        display      : inline-block;
+        background   : #d6d6d6;
+        opacity      : .6;
+        border-radius: 10px;
+        /* box-shadow: 0 0 2px  #000; */
+        margin       : 0 5px;
+        outline      : 0;
+        cursor       : pointer;
+        transition   : background .4s ease;
+
+        &:hover {
+            background: #869791;
+        }
+    }
+
+    /*自定义分页器激活时的样式表现*/
+    .swiper-pagination-bullet-active {
+        opacity         : 1;
+        background-color: rgba(0, 174, 255, .8);
+
+        &:hover {
+            opacity         : 1;
+            background-color: rgba(0, 174, 255, .8);
+        }
+    }
+
+
+
+    .swiper-slide {
+        height: 300px;
+
+        .swiper-box {
+            width              : 100%;
+            height             : 300px;
+            background-size    : 135% !important;
+            background-position: 70% 0 !important;
+            transition         : all 2s linear;
+            position           : relative;
+
+            .swiper-po {
+                position  : absolute;
+                left      : 80px;
+                text-align: center;
+                top       : 45px;
+
+                h5 {
+                    color      : rgba(255, 255, 255, .8);
+                    font-size  : 20px;
+                    font-weight: normal;
+                }
+
+                a {
+                    margin-top      : 15px;
+                    display         : inline-block;
+                    color           : #fff;
+                    background-color: rgb(14, 134, 202);
+                    padding         : 10px 105px;
+                    border          : 1px solid rgb(15, 154, 217);
+
+                    &:hover {
+                        background-color: rgb(0, 174, 255);
+                    }
+                }
+            }
+        }
+    }
+
+    .swiper-slide-active,
+    .swiper-slide-duplicate-active {
+        .swiper-box {
+            background-size    : 126% !important;
+            background-position: 75% 0 !important;
+            transition         : all 2s linear;
+            position           : relative;
+            
+
+            .swiper-po {
+                position  : absolute;
+                left      : 110px;
+                text-align: center;
+                top       : 45px;
+
+                .swiper-image{
+                    opacity: 0;
+                    animation: BannerTransform 1s .3s ease forwards;
+                }
+                .swiper-text{
+                    opacity: 0;
+                    animation: BannerTransform 1s .5s ease forwards;
+                }
+                .swiper-link{
+                    opacity: 0;
+                    animation: BannerTransform 1s .7s ease forwards;
+                }
+
+                h5 {
+                    color      : rgba(255, 255, 255, .8);
+                    font-size  : 20px;
+                    font-weight: normal;
+                }
+
+                a {
+                    margin-top      : 15px;
+                    display         : inline-block;
+                    color           : #fff;
+                    background-color: rgb(14, 134, 202);
+                    padding         : 10px 105px;
+                    border          : 1px solid rgb(15, 154, 217);
+
+                    &:hover {
+                        background-color: rgb(0, 174, 255);
+                    }
+                }
+            }
+        }
+    }
+}
+// 导航
+.store-nav{
+    background-color: rgba(255, 255, 255, 0.05);
+    background-color: #002650;
+    background-image:url(http://10.2.0.202:8081/images/store/header_bg.png);
+    .store-nav-box{
+        padding: 12px 0;
+        text-align: center;
+        h4{
+            line-height: 40px;
+            display: inline-block;
+            color: rgba(255, 255, 255, .8);
+            font-weight: normal;
+            font-size: 14px;
+        }
+        .store-nav-list{
+            display: inline-block;
+            li{
+                display: inline-block;
+                margin: 0 8px;
+                cursor: pointer;
+                transition: all .2s ease;
+                img{
+                    width: 40px;
+                }
+                &:hover{
+                    transform:scale(1.2);
+                }
+            }
+        }
+    }
+}
+
+// 商品
