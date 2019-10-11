@@ -6,15 +6,37 @@ import {
     BASE_URL
 } from "./lib";
 
-//tab选项卡
-let color_bd = ["012650", "2D0F0F", "2D1B11", "190938", "0F0F11", "0E1B3E", "281506", "012650"];
-$(".news-menu li").on("click", function () {
-    console.log($(this).index());
-    $("body").css({
-        backgroundImage: `url(http://localhost:8081/images/news/news-bg-${$(this).index()}.jpg)`,
-        backgroundColor: `#${color_bd[$(this).index()]}`
+$(function () {
+    //tab选项卡
+    let color_bd = ["012650", "2D0F0F", "2D1B11", "190938", "0F0F11", "0E1B3E", "281506", "012650"];
+    $(".news-menu li").on("click", function () {
+        $("body").css({
+            backgroundImage: `url(http://localhost:8081/images/news/news-bg-${$(this).index()}.jpg)`,
+            backgroundColor: `#${color_bd[$(this).index()]}`
+        });
     });
-});
+
+    //点击去往新闻详情页
+    $(".news-im li").on("click", function () {
+        console.log($(this).index());
+        location.href="./static/pages/newsDetail.html";
+    });
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+//新闻页全部新闻
 fetch("http://127.0.0.1:8081/news/recentNews")
     .then(response => response.json())
     .then(data => {
