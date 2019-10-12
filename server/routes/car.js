@@ -10,9 +10,9 @@ const getConnection = require("../mysqlConnection");
  * kind 参数
  */
 router.post("/insert", (req, res) => {
-    let { email,name,title,price,shopbg,gamelogo } = req.body;
+    let { email, name, title, price, shopbg, gamelogo } = req.body;
     let sql = "INSERT INTO car (email,name,title,price,shopbg,gamelogo) VALUES (?,?,?,?,?,?)";
-    let sqlparams = [email, name, title, price, shopbg,gamelogo];
+    let sqlparams = [email, name, title, price, shopbg, gamelogo];
     let db = getConnection();
     db.connect();
     db.query(sql, sqlparams, (err, sqlRes) => {
@@ -33,14 +33,14 @@ router.post("/insert", (req, res) => {
     db.end();
 });
 router.get("/introduce", (req, res) => {
-    let {kind} = req.query;
+    let { kind } = req.query;
     let sql = `SELECT * FROM car WHERE email = '${kind}'`;
     const db = getConnection();
     db.connect();
-    db.query(sql,[kind], (err, sqlRes) => {
-        if(err) {
+    db.query(sql, [kind], (err, sqlRes) => {
+        if (err) {
             console.log(err);
-        }else {
+        } else {
             res.send({
                 contentlist: sqlRes
             })
