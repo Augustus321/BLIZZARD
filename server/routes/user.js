@@ -33,7 +33,7 @@ router.post("/register", (req, res) => {
 
 // 登录
 router.post("/login",(req,res) => {
-    console.log(req.body)
+    console.log(req.body);
     let {email,password} = req.body;
     const db = getConnection();
     db.connect();

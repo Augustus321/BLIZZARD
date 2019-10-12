@@ -6,6 +6,7 @@ import {
     loaddingDetails
 } from "./loadding-newsDetails";
 import "./logging-status";
+import "./Navbar";
 
 
 $(function () {

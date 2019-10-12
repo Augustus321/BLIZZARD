@@ -22,6 +22,9 @@ $("#login").click(function(){
             sessionStorage['name'] = `${data.tishi.name}`
             history.go(-1);
         }
+        if(data.errMsg == "用户不存在"){
+            alert(`用户不存在，请注册！`);
+        }
         else{
             alert('密码有误，请重新登录！');
         }
