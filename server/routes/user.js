@@ -37,7 +37,7 @@ router.post("/login",(req,res) => {
     let {email,password} = req.body;
     const db = getConnection();
     db.connect();
-    db.query("select * from userinfo where email = ?",[email],(err,sqlRes) => {
+    db.query("select * from userinfo where email = ?",[email,password],(err,sqlRes) => {
         console.log(sqlRes);
         let user = sqlRes[0];
         if(email == user.email && password == user.password){
