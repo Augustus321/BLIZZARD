@@ -40,6 +40,11 @@ router.post("/login",(req,res) => {
     db.query("select * from userinfo where email = ?",[email,password],(err,sqlRes) => {
         console.log(sqlRes);
         let user = sqlRes[0];
+        if(!sqlRes){
+            res.send({
+                errMsg:"用户不存在",
+            })
+        }
         if(email == user.email && password == user.password){
             res.send({
                 errMsg:"登录成功",
