@@ -25,7 +25,7 @@ $(function () {
 })
 
 let id = (location.href).split("=")[1];
-fetch("http://127.0.0.1:8081/news/recentNews")
+fetch("http://10.2.0.202:8081/news/recentNews")
     .then(response => response.json())
     .then(data => {
         let htmlStr = "";

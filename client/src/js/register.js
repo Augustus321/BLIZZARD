@@ -40,7 +40,7 @@ $(function () {
                     sessionStorage['login'] = "1";
                     sessionStorage['email']  = `${data.errMsg.email}`;
                     sessionStorage['name'] = `${data.errMsg.usename}`
-                    location.href = "localhost:8090";
+                    location.href = "10.2.0.202:8090";
                 }
             });
     })

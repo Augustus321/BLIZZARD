@@ -24,24 +24,3 @@ export function loaddingDetails() {
         resolve();
     })
 }
-// fetch("http://127.0.0.1:8081/news/recentNews")
-//     .then(response => response.json())
-//     .then(data => {
-//         let htmlStr = "";
-//         data.forEach((list, index) => {
-//             console.log(list)
-//             console.log(index)
-//             htmlStr +=
-//                 `
-//                 <img class="swiper-sm-img" src="">
-//                 <p class="swiper-sm-title">${list.className}</p>
-//                 <p class="swiper-sm-day">${list.day}</p>
-//                 <p class="swiper-sm-word">${list.title}</p>
-//                 `
-//         });
-//         $(".news-lists").html(htmlStr);
-//         $(".news-lists li").on("click", function () {
-//             location.href = `./newsDetail.html?id=${$(this).index()}`;
-//         });
-
-//     })

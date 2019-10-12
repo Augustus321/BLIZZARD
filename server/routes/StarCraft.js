@@ -59,30 +59,6 @@ router.get("/images/StarCraft", (req, res) => {
         break;
     }
 });
-/**
- * 商品信息
- * kind 参数
- */
-/*
-router.get("/goods", (req, res) => {
-    let {kind} = req.query;
-    let sql = `SELECT * FROM goods WHERE kind = '${kind}'`;
-    const db = getConnection();
-    db.connect();
-    db.query(sql, (err, sqlRes) => {
-        if(err) {
-            console.log(err.message);
-        }else {
-            res.send({
-                title: "手机",
-                banner: "phone_banner.png",
-                promo: "phone_promo.png",
-                contentlist: sqlRes
-            })
-        }
-    })
-    db.end();
-});
-*/
+
 // 4. 导出路由
 module.exports = router;

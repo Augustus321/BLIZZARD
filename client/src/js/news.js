@@ -13,7 +13,7 @@ $(function () {
     let color_bd = ["012650", "2D0F0F", "2D1B11", "190938", "0F0F11", "0E1B3E", "281506", "012650"];
     $(".news-menu li").on("click", function () {
         $("body").css({
-            backgroundImage: `url(http://localhost:8081/images/news/news-bg-${$(this).index()}.jpg)`,
+            backgroundImage: `url(http://10.2.0.202:8081/images/news/news-bg-${$(this).index()}.jpg)`,
             backgroundColor: `#${color_bd[$(this).index()]}`
         });
     });
@@ -44,7 +44,7 @@ loaddingImmg();
 
 
 //新闻页全部新闻
-fetch("http://127.0.0.1:8081/news/recentNews")
+fetch("http://10.2.0.202:8081/news/recentNews")
     .then(response => response.json())
     .then(data => {
         let htmlStr = "";
