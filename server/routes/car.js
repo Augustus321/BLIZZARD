@@ -9,6 +9,68 @@ const getConnection = require("../mysqlConnection");
  * 购物车
  * kind 参数
  */
+router.post("/insert", (req, res) => {
+    let { email,name,title,price,shopbg,gamelogo } = req.body;
+    let sql = "INSERT INTO car (email,name,title,price,shopbg,gamelogo) VALUES (?,?,?,?,?,?)";
+    let sqlparams = [email, name, title, price, shopbg,gamelogo];
+    let db = getConnection();
+    db.connect();
+    db.query(sql, sqlparams, (err, sqlRes) => {
+        console.log(err);
+        if (err) {
+            // 用户已存在
+            res.send({
+                status: "200",
+                errMsg: "添加失败"
+            })
+        } else {
+            res.send({
+                status: "201",
+                errMsg: req.body
+            })
+        }
+    })
+    db.end();
+});
+router.get("/introduce", (req, res) => {
+    let {kind} = req.query;
+    let sql = `SELECT * FROM car WHERE email = '${kind}'`;
+    const db = getConnection();
+    db.connect();
+    db.query(sql,[kind], (err, sqlRes) => {
+        if(err) {
+            console.log(err);
+        }else {
+            res.send({
+                contentlist: sqlRes
+            })
+        }
+    })
+    db.end();
+});
+router.post("/delete", (req, res) => {
+    let { id } = req.body;
+    let sql = "delete from car where id = ?";
+    let sqlparams = [id];
+    let db = getConnection();
+    db.connect();
+    db.query(sql, sqlparams, (err, sqlRes) => {
+        console.log(err);
+        if (err) {
+            // 用户已存在
+            res.send({
+                status: "200",
+                errMsg: "添加失败"
+            })
+        } else {
+            res.send({
+                status: "201",
+                errMsg: req.body
+            })
+        }
+    })
+    db.end();
+});
 
 
 // 4. 导出路由

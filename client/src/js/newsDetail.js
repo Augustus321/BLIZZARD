@@ -5,6 +5,7 @@ import {
 import {
     loaddingDetails
 } from "./loadding-newsDetails";
+import "./logging-status";
 
 
 $(function () {

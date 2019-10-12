@@ -9,10 +9,12 @@ $(function(){
         $(".Navbar-modalSection span").html(`${sessionStorage['email']}`);
         $(".nav-reg").css("display","none");
         $(".logout").css("display",'block');
+        $(".login-a").css("display","none");
     }
     else{
         $("#Navbar-act span").html(`我的账户`);
         $(".logout").css("display",'none');
+        $(".login-a").css("display","inline-block");
     }
     $(".logout").click(function(){
         sessionStorage.clear();

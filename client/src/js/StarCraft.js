@@ -5,6 +5,7 @@ import {
     loaddingSmm,
     loaddingVideo
 } from "./loadding-StarCraft";
+import "./logging-status";
 
 //swiper的设置
 loaddingFlash().then(() => {
