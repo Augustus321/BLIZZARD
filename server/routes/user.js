@@ -33,14 +33,19 @@ router.post("/register", (req, res) => {
 
 // 登录
 router.post("/login",(req,res) => {
-    console.log(req.body)
+    console.log(req.body);
     let {email,password} = req.body;
     const db = getConnection();
     db.connect();
-    db.query("select * from userinfo where email = ?",[email],(err,sqlRes) => {
+    db.query("select * from userinfo where email = ?",[email,password],(err,sqlRes) => {
         console.log(sqlRes);
         let user = sqlRes[0];
-        if(email == user.email && password == user.password){
+        if(user == undefined){
+            res.send({
+                errMsg:"用户不存在",
+            })
+        }
+        else if(email == user.email && password == user.password){
             res.send({
                 errMsg:"登录成功",
                 tishi:user
@@ -52,6 +57,7 @@ router.post("/login",(req,res) => {
             })
         }
     })
+    db.end();
 })
 
 // 4. 导出路由
